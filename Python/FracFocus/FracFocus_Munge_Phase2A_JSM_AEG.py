@@ -148,7 +148,7 @@ counties_dedup.head(10)
 
 
 #turns out this ff_tx_nm_7 is wayyyy overestimating water volumes when compared to IHS (because of using sum instead of mean)
-
+# 
 ff_tx_nm_7 = ff_tx_nm_5
 ff_tx_nm_7['VolSum'] = ff_tx_nm_5.groupby(['APINumber'])['TotalBaseWaterVolume'].transform('sum')
 ff_tx_nm_7['VolMean'] = ff_tx_nm_5.groupby(['APINumber'])['TotalBaseWaterVolume'].transform('mean')
