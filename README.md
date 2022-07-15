@@ -1,2 +1,2 @@
 # COG
-USGS conventional oil and gas repository
+USGS continuous oil and gas repository
