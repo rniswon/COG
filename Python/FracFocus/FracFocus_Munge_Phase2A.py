@@ -129,7 +129,7 @@ ff_tx_nm_4.reset_index(drop=True, inplace=True)
 
 # cleanup
 ff_tx_nm_5 = ff_tx_nm_4.drop(['JobEndDate','pKey',], axis=1) #'COUNTY_x'
-#ff_tx_nm_5.rename(columns={'COUNTY_y': 'County'}, inplace=True)
+ff_tx_nm_5.rename(columns={'COUNTY': 'County'}, inplace=True)
 ff_tx_nm_5.reset_index(drop=True, inplace=True)
 
 # this is the final version before messing with duplicates or removing any entries
@@ -193,34 +193,28 @@ df_geo83b['Longitude'] = df_geo83b.geometry.apply(lambda p: p.x)
 df_geo83b['Latitude'] = df_geo83b.geometry.apply(lambda p: p.y)
 
 df_geo83b.Projection.unique() # should be only 'NAD83'
-#%% read HUCS into dataframe, not on github, on local machine
+
+#%% read HUCS into dataframe; within repository but gitignored
 # from sciencebase(https://www.sciencebase.gov/catalog/item/5fc90839d34e4b9faad8a148)
-# and stored in WBD_wd, replace with where it is on your computer, it's > 1 GB 
 
-#wbd_wd = r'C:\Users\galanter\OneDrive - DOI\2-GIS\shapefiles\COG\WBD_HUC12_CONUS_pulled10262020'
+HUCS = gp.read_file("WBD_HUC12_CONUS_pulled10262020/WBD_HUC12_CONUS_pulled10262020.shp")
 
-os.chdir('../../../data-raw')
-print('current working directory:',os.getcwd())
-
-#%% read shapefile
-
-HUCS = gp.read_file(os.path.join(wbd_wd, "WBD_HUC12_CONUS_pulled10262020.shp"))
-
-# check projection of HUCS, should be 'NAD83'
-HUCS.crs
+# check projection of HUCS, should be 'NAD83' aka epsg:4269
+print(HUCS.crs)
 
 # Add HUC12 info data from HUC shapefile to FracFocus data using sjoin
 df_geo83c = gp.sjoin(df_geo83b, HUCS, how='left', op='within')
 
 #%% some checking and clean up
-# just for funsies, plot it with the permian boundary, ok if some are
-# out of the boundary since we used the counties to clip originally ^^
+# plot it with the permian boundary out of the boundary since we used the counties to clip
 BND = gp.read_file("PermianBasin_Extent_201712.shp")
 nm_tx_cnties = gp.read_file('nm_tx_nad83.shp')
+
 # reproject to NAD83
 BND2 = BND.to_crs(epsg=4269)
 BND2.crs
 
+#clip to counties
 clipped = gp.clip(df_geo83c, nm_tx_cnties)
 
 num_rows_orig = len(df_geo83c)
@@ -230,13 +224,13 @@ prct_removed = round(prct_removed,2)
 print (prct_removed,'% of the records were removed.', num_rows_orig - num_rows_clip,
        'rows were removed after clipping by counties')
 
-
 ax = nm_tx_cnties.plot(figsize=(15,5))
 plt.scatter(clipped["geometry"].x, clipped["geometry"].y, color='r', s=1)
 
 #%% write csv with 49471 records
 fracfocus_short = clipped[['APINumber','State','County', 'Latitude', 'Longitude',
                          'job_end_date', 'TotalBaseWaterVolume', 'huc12']].copy()
+fracfocus_short.reset_index(drop=True, inplace=True)
 fracfocus_short.to_csv(os.path.join('..','data','fracfocus_short.csv'))
 
 

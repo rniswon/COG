@@ -36,11 +36,10 @@ import geopandas as gp
 from shapely.geometry import Point
 #import seaborn as sns
 import matplotlib.pyplot as plt
-os.getcwd()
 
 #%% set up directory 
 # do what you have to do to get into 'data-raw' 
-os.chdir('../../data-raw')
+os.chdir('data-raw')
 
 print('current working directory:',os.getcwd())
 
