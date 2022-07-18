@@ -37,3 +37,7 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# big GIS file (HUC12)
+/data-raw/WBD_HUC12_CONUS_pulled10262020/WBD_HUC12_CONUS_pulled10262020.shp
+/data-raw/WBD_HUC12_CONUS_pulled10262020/WBD_HUC12_CONUS_pulled10262020.dbf
