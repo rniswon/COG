@@ -1,4 +1,4 @@
-﻿APINumber,State,County,Latitude,Longitude,Year,MeanBaseWaterVolume,TotalVerticalDepth
+APINumber,State,County,Latitude,Longitude,Year,TotalBaseWaterVolume,TotalVerticalDepth
 42003474640000,Texas,Andrews,32.104685,-101.952807,2017,15309577.08,9093
 42003446540000,Texas,Andrews,32.283442,-102,2012,1418760,11916
 42003446120000,Texas,Andrews,32.19211,-102.12831,2012,57876,4708
