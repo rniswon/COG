@@ -26,6 +26,8 @@
 # -     be as similar to our previous work as possible in which we used 
 # -     counties to define our boundary)
 # - export as a csv  
+
+
 #%%
 # Import required packages
 import os
@@ -39,6 +41,7 @@ import matplotlib.pyplot as plt
 # points working directory to the location of this script
 os.chdir(os.path.dirname(__file__))
 print('current working directory:',os.getcwd())
+
 
 #%% set up directory 
 # move working directory to 'data-raw' 
@@ -58,6 +61,7 @@ combined_csv = pd.concat([pd.read_csv(f, low_memory=False) for f in all_filename
 pd.options.display.max_columns = None
 #combined_csv
 
+
 #%% bring in state and county codes
 
 tx_county_table = pd.read_csv("study_counties_tx.csv")
@@ -68,6 +72,7 @@ nm = [30]
 
 tx_county = tx_county_table['CountyNumber'].tolist()
 nm_county = nm_county_table['CountyNumber'].tolist()
+
 
 #%% filtering, merging, combining. 
 
@@ -109,6 +114,7 @@ combine = [df_nm_3, df_tx_3]
 ff_tx_nm = pd.concat(combine)
 ff_tx_nm.reset_index(drop=True, inplace=True)
 
+
 #%% filtering data, cleaning up, prepping for deduplication - 
 # this results in a full record of treatments
 
@@ -121,9 +127,12 @@ ff_tx_nm_3 = ff_tx_nm_2
 ff_tx_nm_3['State'] = np.where(ff_tx_nm_2['StateNumber']>35, 'Texas', 'New Mexico')
 ff_tx_nm_4 = ff_tx_nm_3.drop(['StateNumber'], axis=1)
 ff_tx_nm_4.reset_index(drop=True, inplace=True)
+
+
 #%% AEG modified this cell to use pd.datetime and to preserve month
 ff_tx_nm_4['job_end_date'] = pd.to_datetime(ff_tx_nm_4['JobEndDate']).dt.date
 ff_tx_nm_4.reset_index(drop=True, inplace=True)
+
 
 #%% AEG removed some of these lines that weren't necessary after using datetime, and retained the year 2020
 
@@ -135,16 +144,27 @@ ff_tx_nm_5.reset_index(drop=True, inplace=True)
 # this is the final version before messing with duplicates or removing any entries
 ff_tx_nm_5.info()
 
+
+#%% crerate mean volume column, with only a single entry for each API
+
+ff_tx_nm_6 = ff_tx_nm_5
+ff_tx_nm_6['VolMeanPerAPI'] = ff_tx_nm_5.groupby(['APINumber'])['TotalBaseWaterVolume'].transform('mean')
+ff_tx_nm_6 = ff_tx_nm_6.drop_duplicates(subset=['APINumber'], keep='first')
+ff_tx_nm_6.reset_index(drop=True, inplace=True)
+ff_tx_nm_6['delta'] = ff_tx_nm_6['TotalBaseWaterVolume'] - ff_tx_nm_6['VolMeanPerAPI']
+ff_tx_nm_6.describe()
+
+
 #%% working with projections (NAH)
 
 # there are 4 unique Projections- 'NAD27', 'WGS84', 'NAD83', 'Nad27'
-ff_tx_nm_5.Projection.unique()
+ff_tx_nm_6.Projection.unique()
 
 # merge NAD27 and Nad27, reproject all to NAD83
-ff_tx_nm_5 = ff_tx_nm_5.replace(['Nad27'],'NAD27')
-df_NAD27 = ff_tx_nm_5[ff_tx_nm_5['Projection'] == "NAD27"].copy()
-df_WGS84 = ff_tx_nm_5[ff_tx_nm_5['Projection'] == "WGS84"].copy()
-df_NAD83 =  ff_tx_nm_5[ff_tx_nm_5['Projection'] == "NAD83"].copy()
+ff_tx_nm_6 = ff_tx_nm_6.replace(['Nad27'],'NAD27')
+df_NAD27 = ff_tx_nm_6[ff_tx_nm_6['Projection'] == "NAD27"].copy()
+df_WGS84 = ff_tx_nm_6[ff_tx_nm_6['Projection'] == "WGS84"].copy()
+df_NAD83 =  ff_tx_nm_6[ff_tx_nm_6['Projection'] == "NAD83"].copy()
 
 # convert dataframes to a geodataframe - for Shapely 2.0 will need to convert 
 
@@ -194,6 +214,7 @@ df_geo83b['Latitude'] = df_geo83b.geometry.apply(lambda p: p.y)
 
 df_geo83b.Projection.unique() # should be only 'NAD83'
 
+
 #%% read HUCS into dataframe; within repository but gitignored
 # from sciencebase(https://www.sciencebase.gov/catalog/item/5fc90839d34e4b9faad8a148)
 
@@ -204,6 +225,7 @@ print(HUCS.crs)
 
 # Add HUC12 info data from HUC shapefile to FracFocus data using sjoin
 df_geo83c = gp.sjoin(df_geo83b, HUCS, how='left', op='within')
+
 
 #%% some checking and clean up
 # plot it with the permian boundary out of the boundary since we used the counties to clip
@@ -227,12 +249,10 @@ print (prct_removed,'% of the records were removed.', num_rows_orig - num_rows_c
 ax = nm_tx_cnties.plot(figsize=(15,5))
 plt.scatter(clipped["geometry"].x, clipped["geometry"].y, color='r', s=1)
 
+
 #%% write csv with 49471 records
-fracfocus_short = clipped[['APINumber','State','County', 'Latitude', 'Longitude',
-                         'job_end_date', 'TotalBaseWaterVolume', 'huc12']].copy()
+fracfocus_short = clipped[['APINumber','OperatorName','TVD','State','County', 'Latitude', 'Longitude',
+                         'job_end_date', 'VolMeanPerAPI', 'huc12']].copy()
 fracfocus_short.reset_index(drop=True, inplace=True)
 fracfocus_short.to_csv(os.path.join('..','data','fracfocus_short.csv'))
-
-
-
 
