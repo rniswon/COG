@@ -297,153 +297,153 @@
 }
 
 
-#  ------------------------------------------------------------------------#
-# B.2. model indirect water-use input data----
-#  ------------------------------------------------------------------------#
-
-
-# make function with following arguments:
-#   data = indirect water-use input data as data frame;
-#   parm = parameters ("Mean", "P5", "P50", "P95", etc.) to model as character vector;
-#   catg = category ("Indirect") of analysis as character vector;
-#   conlev = level for confidence interval as numeric vector
-.model_indirect = function(data=datind,
-                           parm=c("Mean", "P5", "P50", "P95"),
-                           catg="Indirect",
-                           conlev=.conlev) {
-
-  if (any(sapply(list(data, parm, catg, conlev), is.null))) stop("one or more necessary arguments missing")
-
-  # for each use
-  moduse = list()
-  for (iuse in unique(data$Use)) {
-
-    # get data for use
-    dat = data %>%
-      filter(Use == iuse)
-
-    # for each parameter
-    modparm = list()
-    for (iparm in parm) {
-
-      # train model using linear or quantile regression, and test model using leave-one-out cross-validation
-      modtrn = .train_model(data=dat, data2=NULL, parm=iparm, catg=catg, conlev=conlev)
-      modtst = .test_model(data=dat, parm=iparm, conlev=conlev)
-      modparm[[iparm]] = append(modtrn, modtst)
-    }
-    moduse[[iuse]] = modparm
-  }
-
-  # make indirect water use model by use and parameter
-  modind = moduse
-  write_rds(modind, "Product/modind.rds")
-  return(modind)
-}
-
-
-#  ------------------------------------------------------------------------#
-# B.3. model ancillary water-use input data----
-#  ------------------------------------------------------------------------#
-
-
-# make function with following arguments:
-#   data = ancillary water-use input data as data frame;
-#   parm = parameters ("Mean", "P5", "P50", "P95", etc.) to model as character vector;
-#   catg = category ("Ancillary") of analysis as character vector;
-#   conlev = level for confidence interval as numeric vector
-.model_ancillary = function(data=datanc,
-                            parm=c("Mean", "P5", "P50", "P95"),
-                            catg="Ancillary",
-                            conlev=.conlev) {
-
-  if (any(sapply(list(data, parm, catg, conlev), is.null))) stop("one or more necessary arguments missing")
-
-  # for each use
-  moduse = list()
-  for (iuse in unique(data$Use)) {
-
-    # get data for use distributed to wells or withdrawn from sources
-    dat = data %>%
-      filter(Use == iuse,
-             Case == "DistributedtoWells")
-    dat2 = data %>%
-      filter(Use == iuse,
-             Case == "WithdrawnfromSources")
-
-    # for each parameter
-    modparm = list()
-    for (iparm in parm) {
-
-      # train model using linear or quantile regression, and test model using leave-one-out cross-validation
-      modtrn = .train_model(data=dat, data2=dat2, parm=iparm, catg=catg, conlev=conlev)
-      modtst = .test_model(data=dat, parm=iparm, conlev=conlev)
-      modparm[[iparm]] = append(modtrn, modtst)
-    }
-    moduse[[iuse]] = modparm
-  }
-
-  # make ancillary water use model by use and parameter
-  modanc = moduse
-  write_rds(modanc, "Product/modanc.rds")
-  return(modanc)
-}
-
-
-#  ------------------------------------------------------------------------#
-# B.4. model population data----
-#  ------------------------------------------------------------------------#
-
-
-# make function with following arguments:
-#   data = population data as data frame;
-#   conlev = level for confidence interval as numeric vector
-.model_population = function(data=datpop,
-                             conlev=.conlev) {
-
-  if (any(sapply(list(data, conlev), is.null))) stop("one or more necessary arguments missing")
-
-  # summarize population by year
-  data %<>%
-    group_by(Year) %>%
-    select(-State) %>%
-    summarize(across(everything(), sum), .groups="drop")
-
-  # fit linear regression of population against lagged number of wells
-  form = lapply(paste0("Wells", 0:5), function(x) paste("Persons ~", x))
-  mod = lapply(form, function(x) lm(as.formula(x), data=data))
-  idx = lapply(mod, function(x) summary(x)$r.squared) %>%
-    which.max()
-  mod %<>% .[[idx]]
-
-  # get parameter estimates and confidence intervals
-  modparm = tidy(mod, conf.int=T, conf.level=conlev) %>%
-    filter(!term == "(Intercept)") %>%
-    mutate(conlev = conlev)
-
-  # get model summary
-  modsumm = glance(mod)
-
-  # get predicted values and confidence intervals
-  mod0 = lapply(form, function(x) glm(as.formula(x), data=data))
-  mod0 %<>% .[[idx]]
-  modpred = augment(mod0, se_fit=T) %>%
-    mutate(.conf.low = family(mod0)$linkinv(.fitted + qnorm((1 - conlev) / 2) * .se.fit),
-           .conf.high = family(mod0)$linkinv(.fitted - qnorm((1 - conlev) / 2) * .se.fit))
-
-  # combine fitted data with year variable from original data
-  modpred = data %>%
-    select(Year, Persons) %>%
-    full_join(modpred, by="Persons")
-
-  # make fitted model, predicted values, model summary and parameter estimates
-  dat = list()
-  dat$Parameters = modparm
-  dat$Summary = modsumm
-  dat$Predictions = modpred
-  dat$Model = mod0
-
-  # make population model
-  modpop = dat
-  write_rds(modpop, "Product/modpop.rds")
-  return(modpop)
-}
+# #  ------------------------------------------------------------------------#
+# # B.2. model indirect water-use input data----
+# #  ------------------------------------------------------------------------#
+# 
+# 
+# # make function with following arguments:
+# #   data = indirect water-use input data as data frame;
+# #   parm = parameters ("Mean", "P5", "P50", "P95", etc.) to model as character vector;
+# #   catg = category ("Indirect") of analysis as character vector;
+# #   conlev = level for confidence interval as numeric vector
+# .model_indirect = function(data=datind,
+#                            parm=c("Mean", "P5", "P50", "P95"),
+#                            catg="Indirect",
+#                            conlev=.conlev) {
+# 
+#   if (any(sapply(list(data, parm, catg, conlev), is.null))) stop("one or more necessary arguments missing")
+# 
+#   # for each use
+#   moduse = list()
+#   for (iuse in unique(data$Use)) {
+# 
+#     # get data for use
+#     dat = data %>%
+#       filter(Use == iuse)
+# 
+#     # for each parameter
+#     modparm = list()
+#     for (iparm in parm) {
+# 
+#       # train model using linear or quantile regression, and test model using leave-one-out cross-validation
+#       modtrn = .train_model(data=dat, data2=NULL, parm=iparm, catg=catg, conlev=conlev)
+#       modtst = .test_model(data=dat, parm=iparm, conlev=conlev)
+#       modparm[[iparm]] = append(modtrn, modtst)
+#     }
+#     moduse[[iuse]] = modparm
+#   }
+# 
+#   # make indirect water use model by use and parameter
+#   modind = moduse
+#   write_rds(modind, "Product/modind.rds")
+#   return(modind)
+# }
+# 
+# 
+# #  ------------------------------------------------------------------------#
+# # B.3. model ancillary water-use input data----
+# #  ------------------------------------------------------------------------#
+# 
+# 
+# # make function with following arguments:
+# #   data = ancillary water-use input data as data frame;
+# #   parm = parameters ("Mean", "P5", "P50", "P95", etc.) to model as character vector;
+# #   catg = category ("Ancillary") of analysis as character vector;
+# #   conlev = level for confidence interval as numeric vector
+# .model_ancillary = function(data=datanc,
+#                             parm=c("Mean", "P5", "P50", "P95"),
+#                             catg="Ancillary",
+#                             conlev=.conlev) {
+# 
+#   if (any(sapply(list(data, parm, catg, conlev), is.null))) stop("one or more necessary arguments missing")
+# 
+#   # for each use
+#   moduse = list()
+#   for (iuse in unique(data$Use)) {
+# 
+#     # get data for use distributed to wells or withdrawn from sources
+#     dat = data %>%
+#       filter(Use == iuse,
+#              Case == "DistributedtoWells")
+#     dat2 = data %>%
+#       filter(Use == iuse,
+#              Case == "WithdrawnfromSources")
+# 
+#     # for each parameter
+#     modparm = list()
+#     for (iparm in parm) {
+# 
+#       # train model using linear or quantile regression, and test model using leave-one-out cross-validation
+#       modtrn = .train_model(data=dat, data2=dat2, parm=iparm, catg=catg, conlev=conlev)
+#       modtst = .test_model(data=dat, parm=iparm, conlev=conlev)
+#       modparm[[iparm]] = append(modtrn, modtst)
+#     }
+#     moduse[[iuse]] = modparm
+#   }
+# 
+#   # make ancillary water use model by use and parameter
+#   modanc = moduse
+#   write_rds(modanc, "Product/modanc.rds")
+#   return(modanc)
+# }
+# 
+# 
+# #  ------------------------------------------------------------------------#
+# # B.4. model population data----
+# #  ------------------------------------------------------------------------#
+# 
+# 
+# # make function with following arguments:
+# #   data = population data as data frame;
+# #   conlev = level for confidence interval as numeric vector
+# .model_population = function(data=datpop,
+#                              conlev=.conlev) {
+# 
+#   if (any(sapply(list(data, conlev), is.null))) stop("one or more necessary arguments missing")
+# 
+#   # summarize population by year
+#   data %<>%
+#     group_by(Year) %>%
+#     select(-State) %>%
+#     summarize(across(everything(), sum), .groups="drop")
+# 
+#   # fit linear regression of population against lagged number of wells
+#   form = lapply(paste0("Wells", 0:5), function(x) paste("Persons ~", x))
+#   mod = lapply(form, function(x) lm(as.formula(x), data=data))
+#   idx = lapply(mod, function(x) summary(x)$r.squared) %>%
+#     which.max()
+#   mod %<>% .[[idx]]
+# 
+#   # get parameter estimates and confidence intervals
+#   modparm = tidy(mod, conf.int=T, conf.level=conlev) %>%
+#     filter(!term == "(Intercept)") %>%
+#     mutate(conlev = conlev)
+# 
+#   # get model summary
+#   modsumm = glance(mod)
+# 
+#   # get predicted values and confidence intervals
+#   mod0 = lapply(form, function(x) glm(as.formula(x), data=data))
+#   mod0 %<>% .[[idx]]
+#   modpred = augment(mod0, se_fit=T) %>%
+#     mutate(.conf.low = family(mod0)$linkinv(.fitted + qnorm((1 - conlev) / 2) * .se.fit),
+#            .conf.high = family(mod0)$linkinv(.fitted - qnorm((1 - conlev) / 2) * .se.fit))
+# 
+#   # combine fitted data with year variable from original data
+#   modpred = data %>%
+#     select(Year, Persons) %>%
+#     full_join(modpred, by="Persons")
+# 
+#   # make fitted model, predicted values, model summary and parameter estimates
+#   dat = list()
+#   dat$Parameters = modparm
+#   dat$Summary = modsumm
+#   dat$Predictions = modpred
+#   dat$Model = mod0
+# 
+#   # make population model
+#   modpop = dat
+#   write_rds(modpop, "Product/modpop.rds")
+#   return(modpop)
+# }

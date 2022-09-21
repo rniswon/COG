@@ -1,0 +1,472 @@
+﻿"State","County","Use","Year","Mean","Lower","Upper","P5","P50","P95"
+"New Mexico","Chaves","COG mining—Direct and indirect",2010,15.142442,15.020586,15.266291,0,0,43.956356
+"New Mexico","Chaves","COG mining—Direct and indirect",2011,15.889916,15.75602,16.026107,0,2.477736,9.288558
+"New Mexico","Chaves","COG mining—Direct and indirect",2012,16.162307,16.023846,16.303181,0,5.695877,11.648473
+"New Mexico","Chaves","COG mining—Direct and indirect",2013,16.31283,16.171805,16.456337,0,8.962092,17.118835
+"New Mexico","Chaves","COG mining—Direct and indirect",2014,16.431097,16.288036,16.576693,3.050306,10.839138,23.93125
+"New Mexico","Chaves","COG mining—Direct and indirect",2015,16.471316,16.327557,16.617628,1.25745,8.215152,16.39219
+"New Mexico","Chaves","COG mining—Direct and indirect",2016,16.519024,16.374435,16.666189,3.881351,7.791423,44.621943
+"New Mexico","Chaves","COG mining—Direct and indirect",2017,16.570493,16.425009,16.718578,6.454478,24.105706,356.226811
+"New Mexico","Chaves","COG mining—Direct and indirect",2018,16.556803,16.411559,16.704641,8.769118,33.421524,1460.342776
+"New Mexico","Chaves","COG mining—Direct and indirect",2019,16.568336,16.42289,16.716381,3.993423,22.814903,2016.939941
+"New Mexico","De Baca","COG mining—Direct and indirect",2018,1.259019,1.225326,1.294618,1.259019,1.259019,1.259019
+"New Mexico","Eddy","COG mining—Direct and indirect",2010,172.32816,171.14913,173.523548,470.88396,1407.1076190000001,3907.206727
+"New Mexico","Eddy","COG mining—Direct and indirect",2011,395.983102,392.896832,399.118242,744.330811,1449.593301,4137.821629
+"New Mexico","Eddy","COG mining—Direct and indirect",2012,723.802894,717.353084,730.369738,915.853459,1463.437189,4269.172215
+"New Mexico","Eddy","COG mining—Direct and indirect",2013,1088.254023,1077.976475,1098.729432,859.117623,1452.869884,4106.711326
+"New Mexico","Eddy","COG mining—Direct and indirect",2014,2010.943183,1987.921835,2034.50398,852.030173,1452.240858,4083.101414
+"New Mexico","Eddy","COG mining—Direct and indirect",2015,1822.628599,1804.210304,1841.426819,673.316695,1424.054934,3765.254608
+"New Mexico","Eddy","COG mining—Direct and indirect",2016,1905.925737,1887.787323,1924.41609,542.03597,1404.284327,3558.62399
+"New Mexico","Eddy","COG mining—Direct and indirect",2017,3682.476225,3632.636285,3733.702803,602.195025,1428.91877,3971.230986
+"New Mexico","Eddy","COG mining—Direct and indirect",2018,4672.638372,4597.545846,4750.224627,699.561135,1451.967864,5242.061308
+"New Mexico","Eddy","COG mining—Direct and indirect",2019,4407.814118,4340.45469,4477.297201,646.218996,1434.344241,5713.475955
+"New Mexico","Lea","COG mining—Direct and indirect",2010,165.859009,164.769361,166.963165,134.700939,1242.480865,4615.183023
+"New Mexico","Lea","COG mining—Direct and indirect",2011,346.053775,343.7164,348.423157,286.037872,1267.323798,4631.624736
+"New Mexico","Lea","COG mining—Direct and indirect",2012,530.569073,526.944436,534.243921,334.756795,1263.424693,4547.585239
+"New Mexico","Lea","COG mining—Direct and indirect",2013,815.649706,809.749299,821.636733,451.472547,1277.918113,4689.34763
+"New Mexico","Lea","COG mining—Direct and indirect",2014,1387.968949,1376.702884,1399.420924,518.622377,1288.015076,4795.945281
+"New Mexico","Lea","COG mining—Direct and indirect",2015,1564.168851,1550.993324,1577.570146,457.162174,1276.770201,4683.753413
+"New Mexico","Lea","COG mining—Direct and indirect",2016,1779.330567,1763.946827,1794.984997,373.060281,1263.81611,4559.871526
+"New Mexico","Lea","COG mining—Direct and indirect",2017,3180.905508,3145.85235,3216.748639,428.362691,1287.748854,4963.960271
+"New Mexico","Lea","COG mining—Direct and indirect",2018,5437.867078,5352.035865,5526.49613,590.252792,1320.120537,6347.961653
+"New Mexico","Lea","COG mining—Direct and indirect",2019,6972.320981,6832.99693,7117.444895,584.089486,1309.31343,6902.125032
+"New Mexico","Roosevelt","COG mining—Direct and indirect",2012,6.680345,6.599803,6.762878,0,0,0.642166
+"New Mexico","Roosevelt","COG mining—Direct and indirect",2015,6.732764,6.650961,6.816604,0,0.22271,12.687241
+"New Mexico","Roosevelt","COG mining—Direct and indirect",2017,6.749169,6.66697,6.833421,2.753347,15.812536,348.871183
+"New Mexico","Roosevelt","COG mining—Direct and indirect",2018,6.746647,6.664509,6.830835,0.211342,24.426653,1444.468896
+"New Mexico","Roosevelt","COG mining—Direct and indirect",2019,6.748918,6.666725,6.833164,2.373711,14.822461,2013.234992
+"Texas","Andrews","COG mining—Direct and indirect",2010,162.775137,161.693934,163.870896,81.741986,676.585369,1372.646261
+"Texas","Andrews","COG mining—Direct and indirect",2011,362.931271,359.986778,365.92433,453.015533,733.2053,1774.843092
+"Texas","Andrews","COG mining—Direct and indirect",2012,620.5114,614.291387,626.858664,624.538181,747.049188,1906.193678
+"Texas","Andrews","COG mining—Direct and indirect",2013,735.375217,728.689959,742.184277,381.168435,709.516545,1416.38854
+"Texas","Andrews","COG mining—Direct and indirect",2014,1215.154639,1198.970389,1231.781793,476.070519,723.623224,1571.661916
+"Texas","Andrews","COG mining—Direct and indirect",2015,902.504647,894.019615,911.152283,90.602748,665.564917,891.180961
+"Texas","Andrews","COG mining—Direct and indirect",2016,929.189903,920.334329,938.21755,0,646.796739,696.719274
+"Texas","Andrews","COG mining—Direct and indirect",2017,1176.819581,1163.245547,1190.714149,2.829724,668.022923,1067.951904
+"Texas","Andrews","COG mining—Direct and indirect",2018,1123.298596,1110.5165,1136.378364,13.47004,678.541656,2186.670587
+"Texas","Andrews","COG mining—Direct and indirect",2019,1160.728785,1147.251933,1174.526027,0,666.230906,2722.580569
+"Texas","Borden","COG mining—Direct and indirect",2010,90.877612,90.342044,91.419567,0,6.617095,14.591058
+"Texas","Borden","COG mining—Direct and indirect",2011,127.02994,126.138114,127.934467,0,30.457599,18.86384
+"Texas","Borden","COG mining—Direct and indirect",2012,147.030133,145.877657,148.200964,0,34.978898,37.043366
+"Texas","Borden","COG mining—Direct and indirect",2013,160.644597,159.285148,162.027451,8.838749,38.946813,51.031979
+"Texas","Borden","COG mining—Direct and indirect",2014,172.829662,171.266295,174.421834,17.015039,40.52313,54.193715
+"Texas","Borden","COG mining—Direct and indirect",2015,177.016162,175.37729,178.685952,4.815087,36.395501,28.401258
+"Texas","Borden","COG mining—Direct and indirect",2016,182.607894,180.864708,184.385008,5.357569,35.671044,52.980332
+"Texas","Borden","COG mining—Direct and indirect",2017,189.4098,187.538647,191.318667,15.562566,53.087998,377.971024
+"Texas","Borden","COG mining—Direct and indirect",2018,187.996042,186.153519,189.875402,26.896688,63.706974,1497.906599
+"Texas","Borden","COG mining—Direct and indirect",2019,189.268653,187.401303,191.173591,16.570543,52.29841,2044.768619
+"Texas","Brewster","COG mining—Direct and indirect",2017,0.594624,0.583282,0.606415,0.384251,0.384251,0.384251
+"Texas","Brewster","COG mining—Direct and indirect",2018,0.594604,0.583264,0.606395,0,9.198854,1098.415751
+"Texas","Cochran","COG mining—Direct and indirect",2010,15.804746,15.678002,15.933555,0,0,0.289726
+"Texas","Cochran","COG mining—Direct and indirect",2011,16.629686,16.489694,16.772076,0,5.361633,15.514546
+"Texas","Cochran","COG mining—Direct and indirect",2012,16.926471,16.781511,17.073957,0,7.777831,8.139316
+"Texas","Cochran","COG mining—Direct and indirect",2013,17.092783,16.944989,17.243177,0,11.54526,19.694143
+"Texas","Cochran","COG mining—Direct and indirect",2014,17.221278,17.071273,17.373943,0.225156,12.820849,19.2052
+"Texas","Cochran","COG mining—Direct and indirect",2015,17.265931,17.115151,17.419391,0,10.397349,14.099926
+"Texas","Cochran","COG mining—Direct and indirect",2016,17.317655,17.165975,17.47204,0.362394,9.672891,38.679
+"Texas","Cochran","COG mining—Direct and indirect",2017,17.377308,17.224589,17.53276,11.955004,27.290332,366.103478
+"Texas","Cochran","COG mining—Direct and indirect",2018,17.358708,17.206315,17.513824,3.862548,35.102506,1451.966046
+"Texas","Cochran","COG mining—Direct and indirect",2019,17.372568,17.219933,17.527933,2.555885,24.9971,2014.647677
+"Texas","Coke","COG mining—Direct and indirect",2010,4.61041,4.563875,4.657903,0,0,34.890775
+"Texas","Coke","COG mining—Direct and indirect",2011,4.677625,4.629735,4.726516,0,0,16.042588
+"Texas","Coke","COG mining—Direct and indirect",2012,4.700965,4.652599,4.750347,0,0.944384,19.619396
+"Texas","Coke","COG mining—Direct and indirect",2013,4.713633,4.665008,4.763282,0,4.310842,26.306651
+"Texas","Coke","COG mining—Direct and indirect",2014,4.723387,4.674561,4.773243,0,5.786916,28.251494
+"Texas","Coke","COG mining—Direct and indirect",2015,4.726757,4.677862,4.776685,0.154881,3.463659,24.363113
+"Texas","Coke","COG mining—Direct and indirect",2019,4.734643,4.685586,4.784738,0.115629,17.662438,2020.043291
+"Texas","Concho","COG mining—Direct and indirect",2012,0.211884,0.209844,0.213963,0,0,0.157994
+"Texas","Concho","COG mining—Direct and indirect",2013,0.211909,0.209869,0.213989,0,0,3.194569
+"Texas","Concho","COG mining—Direct and indirect",2014,0.211929,0.209889,0.21401,0,0.286491,12.440771
+"Texas","Concho","COG mining—Direct and indirect",2015,0.211936,0.209895,0.214017,0,0,12.203069
+"Texas","Concho","COG mining—Direct and indirect",2016,0.211944,0.209903,0.214025,0.359712,0,39.21593
+"Texas","Concho","COG mining—Direct and indirect",2017,0.211952,0.209911,0.214033,0.157614,13.653302,345.953224
+"Texas","Concho","COG mining—Direct and indirect",2018,0.21195,0.209909,0.214031,0.390834,22.668391,1446.41851
+"Texas","Concho","COG mining—Direct and indirect",2019,0.211952,0.209911,0.214033,0,12.362499,2006.666355
+"Texas","Cottle","COG mining—Direct and indirect",2010,1.399005,1.383564,1.414794,0,0,0.243202
+"Texas","Cottle","COG mining—Direct and indirect",2012,1.407252,1.39163,1.423229,0,0,2.008327
+"Texas","Cottle","COG mining—Direct and indirect",2013,1.408382,1.392735,1.424385,0,1.963183,6.261795
+"Texas","Cottle","COG mining—Direct and indirect",2014,1.409262,1.393596,1.425285,0,4.140958,16.72489
+"Texas","Cottle","COG mining—Direct and indirect",2015,1.409564,1.39389,1.425594,0.057441,1.917944,14.053402
+"Texas","Cottle","COG mining—Direct and indirect",2016,1.409909,1.394228,1.425947,1.293729,1.293729,39.849369
+"Texas","Crane","COG mining—Direct and indirect",2010,49.955638,49.614273,50.301732,0,23.066992,51.195529
+"Texas","Crane","COG mining—Direct and indirect",2011,59.286353,58.820013,59.760147,0,49.313325,84.673746
+"Texas","Crane","COG mining—Direct and indirect",2012,63.425,62.894528,63.964496,25.063085,57.643854,149.09521
+"Texas","Crane","COG mining—Direct and indirect",2013,66.207715,65.630877,66.794782,145.24787,72.638488,296.942067
+"Texas","Crane","COG mining—Direct and indirect",2014,67.891376,67.285518,68.508244,96.532038,65.994888,200.318567
+"Texas","Crane","COG mining—Direct and indirect",2015,68.399368,67.784449,69.025546,60.048864,58.358757,131.934851
+"Texas","Crane","COG mining—Direct and indirect",2016,68.863243,68.240065,69.497908,0,48.111225,40.909078
+"Texas","Crane","COG mining—Direct and indirect",2017,69.820088,69.179733,70.472408,6.966158,65.828908,369.550449
+"Texas","Crane","COG mining—Direct and indirect",2018,69.611872,68.97532,70.260281,15.525055,76.046912,1484.618453
+"Texas","Crane","COG mining—Direct and indirect",2019,69.896556,69.254836,70.550279,25.319294,67.545392,2066.770373
+"Texas","Crockett","COG mining—Direct and indirect",2010,147.317733,146.413486,148.233218,0,549.695581,1362.914244
+"Texas","Crockett","COG mining—Direct and indirect",2011,267.525517,265.858752,269.213313,0,563.110824,1240.630141
+"Texas","Crockett","COG mining—Direct and indirect",2012,379.962778,377.405694,382.55475,31.105281,572.143053,1313.569857
+"Texas","Crockett","COG mining—Direct and indirect",2013,494.056237,490.259282,497.912463,102.723621,580.120684,1376.234196
+"Texas","Crockett","COG mining—Direct and indirect",2014,645.532895,639.582613,651.594933,142.815003,586.308175,1435.373015
+"Texas","Crockett","COG mining—Direct and indirect",2015,671.536393,665.10224,678.096249,62.622028,572.356741,1290.325032
+"Texas","Crockett","COG mining—Direct and indirect",2016,739.958638,732.215427,747.867368,31.943224,567.121354,1260.143916
+"Texas","Crockett","COG mining—Direct and indirect",2017,865.385414,855.085759,875.936218,41.454415,584.438066,1583.917714
+"Texas","Crockett","COG mining—Direct and indirect",2018,815.764823,806.616336,825.123212,25.730089,591.147568,2656.394459
+"Texas","Crockett","COG mining—Direct and indirect",2019,828.273094,818.859418,837.905727,0.140204,577.53366,3176.48483
+"Texas","Crosby","COG mining—Direct and indirect",2010,4.94742,4.90572,4.989835,0,0,0.100382
+"Texas","Crosby","COG mining—Direct and indirect",2011,5.02524,4.982231,5.068998,0,0,1.939378
+"Texas","Crosby","COG mining—Direct and indirect",2012,5.052829,5.009349,5.097069,0,0.946629,44.456766
+"Texas","Crosby","COG mining—Direct and indirect",2013,5.068635,5.024885,5.113154,0,10.127175,121.723821
+"Texas","Crosby","COG mining—Direct and indirect",2014,5.081171,5.037205,5.12591,15.945468,17.818309,199.116038
+"Texas","Crosby","COG mining—Direct and indirect",2015,5.083267,5.039265,5.128044,0,6.573434,86.924169
+"Texas","Crosby","COG mining—Direct and indirect",2016,5.087619,5.043542,5.132473,0,5.247519,104.201884
+"Texas","Crosby","COG mining—Direct and indirect",2017,5.092145,5.04799,5.137079,0,19.857673,395.119569
+"Texas","Crosby","COG mining—Direct and indirect",2018,5.090221,5.0461,5.135121,0,26.065961,1461.511847
+"Texas","Crosby","COG mining—Direct and indirect",2019,5.091351,5.04721,5.136271,0,15.659826,2020.542798
+"Texas","Culberson","COG mining—Direct and indirect",2010,153.593415,152.638754,154.560093,0,465.616834,833.433933
+"Texas","Culberson","COG mining—Direct and indirect",2011,296.354264,294.496018,298.23611,0,490.058795,845.008074
+"Texas","Culberson","COG mining—Direct and indirect",2012,435.75262,432.928301,438.614032,110.242462,495.682766,876.573424
+"Texas","Culberson","COG mining—Direct and indirect",2013,583.242286,579.117379,587.426376,157.577579,500.151896,896.646503
+"Texas","Culberson","COG mining—Direct and indirect",2014,798.127714,791.514043,804.85284,185.874253,504.635257,935.098139
+"Texas","Culberson","COG mining—Direct and indirect",2015,909.404397,901.072152,917.892176,188.244235,502.612728,934.860438
+"Texas","Culberson","COG mining—Direct and indirect",2016,1062.981385,1051.830001,1074.371754,176.298203,500.083899,937.535436
+"Texas","Culberson","COG mining—Direct and indirect",2017,1375.818646,1358.1682,1393.933894,201.76694,519.706197,1289.297776
+"Texas","Culberson","COG mining—Direct and indirect",2018,1316.682133,1300.659047,1333.104926,219.345319,531.227359,2420.18539
+"Texas","Culberson","COG mining—Direct and indirect",2019,1415.497685,1397.044752,1434.444615,224.282914,522.024138,2993.819059
+"Texas","Dawson","COG mining—Direct and indirect",2010,48.200283,47.867673,48.537547000000004,0,27.439327,103.043118
+"Texas","Dawson","COG mining—Direct and indirect",2011,56.777009,56.328141,57.233088,0,51.58056,110.96658
+"Texas","Dawson","COG mining—Direct and indirect",2012,60.478244,59.971753,60.993362,0,57.004045,140.098143
+"Texas","Dawson","COG mining—Direct and indirect",2013,62.662664,62.11993,63.214964,28.25111,60.97196,154.086757
+"Texas","Dawson","COG mining—Direct and indirect",2014,64.411913,63.839063,64.995137,31.570755,61.846577,148.730241
+"Texas","Dawson","COG mining—Direct and indirect",2015,64.925146,64.343195,65.517719,6.882289,55.914576,101.033708
+"Texas","Dawson","COG mining—Direct and indirect",2016,65.652474,65.057487,66.258445,5.343352,54.88939,121.962103
+"Texas","Dawson","COG mining—Direct and indirect",2017,66.462665,65.85315,67.083567,5.83506,70.902944,429.91629
+"Texas","Dawson","COG mining—Direct and indirect",2018,66.208581,65.603729,66.824691,1.211636,79.216333,1521.863324
+"Texas","Dawson","COG mining—Direct and indirect",2019,66.417589,65.808941,67.037601,1.292586,69.311412,2086.978741
+"Texas","Dickens","COG mining—Direct and indirect",2012,0.130118,0.128085,0.132217,0,0,0.094041
+"Texas","Dickens","COG mining—Direct and indirect",2013,0.130128,0.128094,0.132227,0,0.189659,5.564403
+"Texas","Dickens","COG mining—Direct and indirect",2017,0.130144,0.12811,0.132243,0.106689,15.433516,345.889271
+"Texas","Ector","COG mining—Direct and indirect",2010,131.136872,130.35788,131.92523,42.668996,326.789941,476.527086
+"Texas","Ector","COG mining—Direct and indirect",2011,224.281703,222.803939,225.7792,218.289151,355.141375,535.560058
+"Texas","Ector","COG mining—Direct and indirect",2012,304.767772,302.42264,307.14956,419.645472,373.295708,719.237048
+"Texas","Ector","COG mining—Direct and indirect",2013,367.372209,364.140524,370.661769,448.247818,375.058279,706.454013
+"Texas","Ector","COG mining—Direct and indirect",2014,423.585479,419.447548,427.805865,387.737278,366.71055,589.14333
+"Texas","Ector","COG mining—Direct and indirect",2015,408.84736,404.997823,412.770781,179.190128,334.214181,218.97012
+"Texas","Ector","COG mining—Direct and indirect",2016,422.191653,418.105551,426.358411,95.088234,321.260091,95.088234
+"Texas","Ector","COG mining—Direct and indirect",2017,465.63086,460.705586,470.662581,126.801228,341.784575,457.802612
+"Texas","Ector","COG mining—Direct and indirect",2018,447.393945,442.817807,452.065652,95.813162,346.288734,1503.507708
+"Texas","Ector","COG mining—Direct and indirect",2019,460.415367,455.590811,465.343199,109.77024,338.388671,2092.960987
+"Texas","Edwards","COG mining—Direct and indirect",2010,2.260533,2.23008,2.291828,0,0,45.740349
+"Texas","Edwards","COG mining—Direct and indirect",2011,2.276487,2.245606,2.308229,0,0,1.337406
+"Texas","Edwards","COG mining—Direct and indirect",2012,2.281993,2.250963,2.31389,0,1.155434,2.480428
+"Texas","Edwards","COG mining—Direct and indirect",2013,2.284945,2.253836,2.316925,0.649431,3.820192,0.649431
+"Texas","Fisher","COG mining—Direct and indirect",2010,5.754247,5.703294,5.806118,0,0,14.044519
+"Texas","Fisher","COG mining—Direct and indirect",2011,5.859816,5.806996,5.913606,0,1.874104,17.100408
+"Texas","Fisher","COG mining—Direct and indirect",2012,5.896518,5.843039,5.950985,0,5.292731,21.894109
+"Texas","Fisher","COG mining—Direct and indirect",2013,5.916517,5.862677,5.971355,0,8.859675,31.01515
+"Texas","Fisher","COG mining—Direct and indirect",2014,5.931837,5.87772,5.986961,2.069572,10.135263,30.526207
+"Texas","Fisher","COG mining—Direct and indirect",2015,5.937126,5.882913,5.992348,1.664328,7.711763,25.420933
+"Texas","Fisher","COG mining—Direct and indirect",2017,5.949657,5.895215,6.005114,0,22.499646,351.869729
+"Texas","Fisher","COG mining—Direct and indirect",2018,5.947836,5.893427,6.003258,0.156513,31.614977,1453.551908
+"Texas","Fisher","COG mining—Direct and indirect",2019,5.949434,5.894997,6.004887,0,21.409328,2015.016645
+"Texas","Floyd","COG mining—Direct and indirect",2010,0.25506,0.250198,0.260115,0,0.182387,0.182387
+"Texas","Floyd","COG mining—Direct and indirect",2012,0.255333,0.25046,0.260399,0.328006,26.840061,1.947512
+"Texas","Gaines","COG mining—Direct and indirect",2010,47.882991,47.551987,48.218635,0,26.607565,85.022644
+"Texas","Gaines","COG mining—Direct and indirect",2011,56.559676,56.110293,57.016316,0,59.670416,201.249593
+"Texas","Gaines","COG mining—Direct and indirect",2012,60.177704,59.671774,60.692286,58.904923,63.189286,207.260188
+"Texas","Gaines","COG mining—Direct and indirect",2013,62.157744,61.618916,62.706078,61.142627,61.142627,148.235214
+"Texas","Gaines","COG mining—Direct and indirect",2014,63.904141,63.33521,64.483385,70.012723,62.819187,152.613843
+"Texas","Gaines","COG mining—Direct and indirect",2015,64.285885,63.710184,64.872084,18.959615,53.077956,58.675371
+"Texas","Gaines","COG mining—Direct and indirect",2016,64.886423,64.300006,65.483634,0,48.644511,38.2294
+"Texas","Gaines","COG mining—Direct and indirect",2017,65.786135,65.18357,66.399945,16.524774,67.865838,385.124168
+"Texas","Gaines","COG mining—Direct and indirect",2018,65.466527,64.869786,66.074349,0,74.074126,1451.516446
+"Texas","Gaines","COG mining—Direct and indirect",2019,65.610045,65.010713,66.22053,0,62.364833,1994.727787
+"Texas","Garza","COG mining—Direct and indirect",2010,2.688466,2.665569,2.71176,0,0,0.932139
+"Texas","Garza","COG mining—Direct and indirect",2011,2.711305,2.68802,2.734997,0,0,7.638707
+"Texas","Garza","COG mining—Direct and indirect",2012,2.719148,2.695729,2.742977,0,1.614438,14.866195
+"Texas","Garza","COG mining—Direct and indirect",2013,2.723358,2.699867,2.747262,0,4.579924,16.685877
+"Texas","Garza","COG mining—Direct and indirect",2014,2.726658,2.70311,2.75062,2.05491,6.857942,28.365865
+"Texas","Garza","COG mining—Direct and indirect",2015,2.72774,2.704173,2.751721,0,3.832984,15.959232
+"Texas","Garza","COG mining—Direct and indirect",2016,2.729004,2.705416,2.753007,0,2.707555,35.670734
+"Texas","Garza","COG mining—Direct and indirect",2017,2.730394,2.706781,2.754421,0,18.821353,344.841815
+"Texas","Garza","COG mining—Direct and indirect",2018,2.730057,2.70645,2.754078,2.917076,28.738628,1456.259139
+"Texas","Garza","COG mining—Direct and indirect",2019,2.730399,2.706787,2.754427,1.610414,18.633221,2018.940769
+"Texas","Glasscock","COG mining—Direct and indirect",2010,165.666715,164.577975,166.769956,165.796664,1359.683282,2780.090661
+"Texas","Glasscock","COG mining—Direct and indirect",2011,373.534178,370.808623,376.300096,511.399377,1412.594226,3137.262448
+"Texas","Glasscock","COG mining—Direct and indirect",2012,703.623775,697.490361,709.866016,782.136333,1440.772848,3442.628749
+"Texas","Glasscock","COG mining—Direct and indirect",2013,1110.505647,1099.381238,1121.857488,776.742167,1437.623517,3370.217951
+"Texas","Glasscock","COG mining—Direct and indirect",2014,2006.126492,1981.82041,2031.036182,752.309558,1434.488419,3316.185711
+"Texas","Glasscock","COG mining—Direct and indirect",2015,1877.587017,1856.760827,1898.885698,588.859821,1408.507838,3025.110554
+"Texas","Glasscock","COG mining—Direct and indirect",2016,1907.287272,1888.043004,1926.927882,443.702968,1386.732373,2794.142073
+"Texas","Glasscock","COG mining—Direct and indirect",2017,3438.928742,3390.307509,3488.964844,486.516864,1408.860744,3176.326741
+"Texas","Glasscock","COG mining—Direct and indirect",2018,3528.133394,3477.714211,3580.036017,539.479367,1425.494293,4369.275904
+"Texas","Glasscock","COG mining—Direct and indirect",2019,3719.61484,3664.276259,3776.650518,510.420451,1411.379171,4883.28181
+"Texas","Hale","COG mining—Direct and indirect",2013,0.516916,0.507058,0.527165,0,0.556728,0.556728
+"Texas","Hale","COG mining—Direct and indirect",2014,0.517034,0.507171,0.527287,0.477222,2.333531,6.15225
+"Texas","Hockley","COG mining—Direct and indirect",2010,6.290134,6.237431,6.343736,0,0,6.462629
+"Texas","Hockley","COG mining—Direct and indirect",2011,6.416369,6.361553,6.472137,0,2.676069,4.650945
+"Texas","Hockley","COG mining—Direct and indirect",2012,6.460301,6.404739,6.516837,0,5.793967,5.793967
+"Texas","Hockley","COG mining—Direct and indirect",2013,6.484316,6.428342,6.541273,0,9.360911,14.915008
+"Texas","Hockley","COG mining—Direct and indirect",2014,6.503286,6.446986,6.560578,0,12.340629,35.113248
+"Texas","Hockley","COG mining—Direct and indirect",2015,6.509212,6.452809,6.566609,0,8.613971,14.188363
+"Texas","Hockley","COG mining—Direct and indirect",2016,6.516483,6.459955,6.574009,0,7.689027,36.333651
+"Texas","Hockley","COG mining—Direct and indirect",2017,6.524477,6.467811,6.582145,0,24.003311,347.938518
+"Texas","Hockley","COG mining—Direct and indirect",2018,6.523288,6.466643,6.580934,3.537804,36.125929,1486.127491
+"Texas","Hockley","COG mining—Direct and indirect",2019,6.524143,6.467483,6.581804,0,22.712507,2008.651648
+"Texas","Howard","COG mining—Direct and indirect",2010,163.038411,161.983168,164.107494,0,661.205794,3802.219846
+"Texas","Howard","COG mining—Direct and indirect",2011,343.536366,341.227197,345.877002,145.132445,696.674474,3947.65223
+"Texas","Howard","COG mining—Direct and indirect",2012,569.681289,565.714044,573.70457,327.062188,712.022005,4097.256212
+"Texas","Howard","COG mining—Direct and indirect",2013,916.484902,909.369541,923.71249,448.634585,727.217125,4247.536855
+"Texas","Howard","COG mining—Direct and indirect",2014,1514.944066,1501.975079,1528.138969,449.872811,727.791013,4238.52966
+"Texas","Howard","COG mining—Direct and indirect",2015,1547.086531,1533.793021,1560.612487,328.745262,707.925249,4021.684983
+"Texas","Howard","COG mining—Direct and indirect",2016,1809.630978,1793.26718,1826.296171,259.213302,697.076259,3923.357852
+"Texas","Howard","COG mining—Direct and indirect",2017,4128.389101,4066.967388,4191.694517,370.020221,729.028434,4424.798046
+"Texas","Howard","COG mining—Direct and indirect",2018,3941.73929,3887.8134,3997.18218,406.331371,743.256153,5588.541774
+"Texas","Howard","COG mining—Direct and indirect",2019,5382.860718,5286.180957,5483.142743,424.451287,735.957548,6185.296412
+"Texas","Hudspeth","COG mining—Direct and indirect",2016,0.831287,0.818298,0.844696,0.173541,0,0.173541
+"Texas","Hudspeth","COG mining—Direct and indirect",2018,0.831379,0.818386,0.844791,0.204663,10.217624,1407.376122
+"Texas","Hudspeth","COG mining—Direct and indirect",2019,0.831411,0.818418,0.844824,0,0.212461,1971.274645
+"Texas","Irion","COG mining—Direct and indirect",2010,158.813885,157.800062,159.840819,33.073054,778.783234,1751.543765
+"Texas","Irion","COG mining—Direct and indirect",2011,324.723352,322.557355,326.918635,253.096816,813.550213,1888.457897
+"Texas","Irion","COG mining—Direct and indirect",2012,501.552143,498.094986,505.057626,373.277793,819.976127,1929.758392
+"Texas","Irion","COG mining—Direct and indirect",2013,717.827023,712.229233,723.513502,438.651876,827.051572,1981.470692
+"Texas","Irion","COG mining—Direct and indirect",2014,1041.135584,1031.53,1050.921743,441.277714,827.825946,1974.897283
+"Texas","Irion","COG mining—Direct and indirect",2015,1080.379487,1070.056749,1090.90333,338.882937,810.66674,1790.90872
+"Texas","Irion","COG mining—Direct and indirect",2016,1241.9913,1228.7628,1255.507729,292.940393,803.226009,1733.955956
+"Texas","Irion","COG mining—Direct and indirect",2017,1624.536328,1603.623628,1646.001677,296.901133,819.740778,2047.994609
+"Texas","Irion","COG mining—Direct and indirect",2018,1511.630427,1493.442841,1530.266463,302.684804,829.55781,3158.19504
+"Texas","Irion","COG mining—Direct and indirect",2019,1656.143581,1634.620596,1678.240912,311.785237,820.956047,3739.130067
+"Texas","Jeff Davis","COG mining—Direct and indirect",2014,9.377235,9.231132,9.528037,1.37563,0,1.37563
+"Texas","Jeff Davis","COG mining—Direct and indirect",2017,9.42275,9.275237,9.575031,7.555028,9.013863,338.538763
+"Texas","Jeff Davis","COG mining—Direct and indirect",2018,9.417974,9.270609,9.570099,6.400635,17.828466,1436.570262
+"Texas","Jones","COG mining—Direct and indirect",2010,0.713083,0.705769,0.72055,0,0,4.487556
+"Texas","Jones","COG mining—Direct and indirect",2011,0.714677,0.707331,0.722178,0,0,3.892765
+"Texas","Jones","COG mining—Direct and indirect",2012,0.715218,0.70786,0.72273,0,0,0.168215
+"Texas","Jones","COG mining—Direct and indirect",2013,0.71551,0.708147,0.723028,0,3.019839,6.85547
+"Texas","Jones","COG mining—Direct and indirect",2014,0.715735,0.708367,0.723258,0,4.696399,11.234099
+"Texas","Jones","COG mining—Direct and indirect",2015,0.715815,0.708445,0.72334,1.584135,2.974599,14.647077
+"Texas","Jones","COG mining—Direct and indirect",2018,0.71597,0.708597,0.723499,0.07632,26.877813,1442.778052
+"Texas","Kent","COG mining—Direct and indirect",2011,1.286794,1.27254,1.301372,0,0,0.129792
+"Texas","Kent","COG mining—Direct and indirect",2012,1.28856,1.274266,1.303177,0,0,8.574173
+"Texas","Kent","COG mining—Direct and indirect",2013,1.289504,1.27519,1.304143,0,0.803085,10.393855
+"Texas","Kent","COG mining—Direct and indirect",2015,1.290495,1.276159,1.305157,0.757845,0.757845,18.185462
+"Texas","Kent","COG mining—Direct and indirect",2017,1.291093,1.276743,1.305768,1.792035,16.046942,350.718724
+"Texas","Kent","COG mining—Direct and indirect",2019,1.291081,1.276732,1.305756,0.024787,14.856382,2012.648747
+"Texas","King","COG mining—Direct and indirect",2011,1.021246,1.011988,1.030675,0,0,0.067549
+"Texas","King","COG mining—Direct and indirect",2012,1.022355,1.013077,1.031804,0,0,4.86125
+"Texas","King","COG mining—Direct and indirect",2013,1.022966,1.013677,1.032427,0,2.064921,31.018795
+"Texas","King","COG mining—Direct and indirect",2014,1.023432,1.014135,1.032901,2.902664,4.443182,43.915676
+"Texas","King","COG mining—Direct and indirect",2015,1.023585,1.014285,1.033057,0,1.518467,32.725936
+"Texas","King","COG mining—Direct and indirect",2016,1.023764,1.014461,1.03324,0,0.493281,53.654331
+"Texas","King","COG mining—Direct and indirect",2017,1.023954,1.014647,1.033433,0,15.905378,354.30716
+"Texas","King","COG mining—Direct and indirect",2018,1.023897,1.014591,1.033375,0,24.619738,1451.121767
+"Texas","King","COG mining—Direct and indirect",2019,1.023944,1.014638,1.033423,0,14.414089,2012.586504
+"Texas","Lamb","COG mining—Direct and indirect",2016,0.130075,0.126594,0.133753,0.130075,0.130075,0.130075
+"Texas","Loving","COG mining—Direct and indirect",2010,161.821966,160.781236,162.876257,0,763.342488,3094.416134
+"Texas","Loving","COG mining—Direct and indirect",2011,328.339551,326.194065,330.513447,61.55892,787.483721,3102.339595
+"Texas","Loving","COG mining—Direct and indirect",2012,525.151698,521.610409,528.741401,231.000149,801.02688,3230.039501
+"Texas","Loving","COG mining—Direct and indirect",2013,748.260467,742.9743,753.622394,267.234364,803.892123,3230.642291
+"Texas","Loving","COG mining—Direct and indirect",2014,1140.036657,1130.965351,1149.254659,293.449619,808.074756,3265.443248
+"Texas","Loving","COG mining—Direct and indirect",2015,1440.815083,1428.791761,1453.042475,322.184242,809.861457,3311.447484
+"Texas","Loving","COG mining—Direct and indirect",2016,1945.50204,1925.993894,1965.40942,328.970982,810.039186,3346.978597
+"Texas","Loving","COG mining—Direct and indirect",2017,3856.319369,3798.066448,3916.387034,390.517649,834.874115,3762.019379
+"Texas","Loving","COG mining—Direct and indirect",2018,4044.377197,3983.859887,4106.761458,447.64299,852.109121,4962.269901
+"Texas","Loving","COG mining—Direct and indirect",2019,4341.914698,4272.604712,4413.51045,420.665493,838.294728,5479.926486
+"Texas","Lubbock","COG mining—Direct and indirect",2010,1.502019,1.486661,1.517696,0,0,4.344298
+"Texas","Lubbock","COG mining—Direct and indirect",2011,1.509105,1.493603,1.524931,0,0,0.098828
+"Texas","Lubbock","COG mining—Direct and indirect",2012,1.511531,1.49598,1.527409,0,0,7.326316
+"Texas","Lubbock","COG mining—Direct and indirect",2013,1.51284,1.497262,1.528746,0,2.617518,15.230464
+"Texas","Lubbock","COG mining—Direct and indirect",2014,1.51384,1.498242,1.529767,0,3.893107,14.74152
+"Texas","Lubbock","COG mining—Direct and indirect",2015,1.514199,1.498593,1.530133,0,2.27155,19.371391
+"Texas","Lubbock","COG mining—Direct and indirect",2018,1.5149,1.49928,1.530849,0.299897,26.475493,1451.153046
+"Texas","Lynn","COG mining—Direct and indirect",2010,1.767312,1.745973,1.78918,0,0,2.25214
+"Texas","Lynn","COG mining—Direct and indirect",2011,1.777135,1.75556,1.799248,0,0,0.440456
+"Texas","Lynn","COG mining—Direct and indirect",2012,1.780506,1.758849,1.802703,0,3.107168,10.10173
+"Texas","Lynn","COG mining—Direct and indirect",2013,1.782311,1.76061,1.804553,0,6.072654,11.921412
+"Texas","Lynn","COG mining—Direct and indirect",2014,1.783703,1.761969,1.805981,0.234409,7.548729,13.866255
+"Texas","Martin","COG mining—Direct and indirect",2010,169.849004,168.708227,171.005314,434.9758,1735.946169,6723.928753
+"Texas","Martin","COG mining—Direct and indirect",2011,398.084631,395.015106,401.202234,795.148446,1790.962214,7106.655295
+"Texas","Martin","COG mining—Direct and indirect",2012,744.510827,737.909846,751.230972,988.872897,1808.013874,7276.9464610000005
+"Texas","Martin","COG mining—Direct and indirect",2013,1150.091884,1139.216283,1161.177136,941.85035,1798.84997,7131.522075
+"Texas","Martin","COG mining—Direct and indirect",2014,2090.04903,2068.188218,2112.376918,907.704452,1794.311471,7060.453331
+"Texas","Martin","COG mining—Direct and indirect",2015,1865.286219,1848.009371,1882.889155,723.440524,1765.323604,6732.871381
+"Texas","Martin","COG mining—Direct and indirect",2016,1986.076676,1968.251819,2004.227335,599.791668,1746.655668,6539.626587
+"Texas","Martin","COG mining—Direct and indirect",2017,4632.310259,4574.052418,4692.071257,690.478202,1775.700799,7005.77688
+"Texas","Martin","COG mining—Direct and indirect",2018,6576.50646,6478.09095,6677.958368,793.394763,1799.551836,8286.342347
+"Texas","Martin","COG mining—Direct and indirect",2019,10780.16843,10544.759019,11026.328779,803.882809,1791.150559,8869.711161
+"Texas","Menard","COG mining—Direct and indirect",2010,0.107292,0.105989,0.108627,0,0,0.066405
+"Texas","Menard","COG mining—Direct and indirect",2011,0.107328,0.106024,0.108664,0,0,0.688507
+"Texas","Menard","COG mining—Direct and indirect",2012,0.10734,0.106036,0.108676,0,0.070983,1.83153
+"Texas","Menard","COG mining—Direct and indirect",2014,0.107352,0.106047,0.108688,0,5.013758,11.68052
+"Texas","Menard","COG mining—Direct and indirect",2018,0.107357,0.106052,0.108694,0.056325,27.395658,1445.65826
+"Texas","Midland","COG mining—Direct and indirect",2010,166.1739,165.079804,167.282596,330.714436,1894.368656,10254.860457
+"Texas","Midland","COG mining—Direct and indirect",2011,372.27909,369.61347,374.983437,652.033926,1943.771098,10569.440984
+"Texas","Midland","COG mining—Direct and indirect",2012,637.964943,633.180194,642.822556,801.35477,1954.407214,10661.85099
+"Texas","Midland","COG mining—Direct and indirect",2013,918.18035,911.077604,925.394711,758.495061,1945.844767,10523.727964
+"Texas","Midland","COG mining—Direct and indirect",2014,1657.886126,1643.257467,1672.777579,808.299732,1953.435658,10599.903287
+"Texas","Midland","COG mining—Direct and indirect",2015,1846.299058,1829.564654,1863.342416,729.49437,1939.684711,10457.289091
+"Texas","Midland","COG mining—Direct and indirect",2016,2865.078814,2831.519069,2899.443616,747.382011,1941.466326,10512.290493
+"Texas","Midland","COG mining—Direct and indirect",2017,6918.914963,6813.637299,7027.496977,764.525072,1959.885709,10849.450115
+"Texas","Midland","COG mining—Direct and indirect",2018,16796.035273,16422.839466,17186.586619,886.174404,1986.443305,12162.871697
+"Texas","Midland","COG mining—Direct and indirect",2019,14276.931395,13986.451359,14579.733105,834.913684,1969.12041,12637.937023
+"Texas","Mitchell","COG mining—Direct and indirect",2010,16.291725,16.161233,16.424341,0,0,132.182812
+"Texas","Mitchell","COG mining—Direct and indirect",2011,17.170622,17.02603,17.31769,0,9.593541,152.275204
+"Texas","Mitchell","COG mining—Direct and indirect",2012,17.492969,17.34298,17.645576,30.891755,14.415569,174.10541
+"Texas","Mitchell","COG mining—Direct and indirect",2013,17.655244,17.502489,17.810689,29.660427,11.867696,108.99597
+"Texas","Mitchell","COG mining—Direct and indirect",2014,17.77575,17.620922,17.933324,0,6.427011,26.975188
+"Texas","Mitchell","COG mining—Direct and indirect",2015,17.819344,17.663759,17.977694,0,2.399624,2.399624
+"Texas","Mitchell","COG mining—Direct and indirect",2016,17.872688,17.716176,18.031991,0,0.973466,18.460446
+"Texas","Mitchell","COG mining—Direct and indirect",2017,17.932954,17.775392,18.093334,0,17.287749,330.065314
+"Texas","Mitchell","COG mining—Direct and indirect",2018,17.916921,17.75964,18.077013,0,26.603567,1434.181279
+"Texas","Mitchell","COG mining—Direct and indirect",2019,17.930175,17.772662,18.090505,0,15.896703,1989.561551
+"Texas","Nolan","COG mining—Direct and indirect",2010,7.866344,7.800905,7.93289,0,0,9.265514
+"Texas","Nolan","COG mining—Direct and indirect",2011,8.06538,7.996632,8.13532,0,5.652283,22.056548
+"Texas","Nolan","COG mining—Direct and indirect",2012,8.134762,8.064837,8.20591,0,8.469453,19.54889
+"Texas","Nolan","COG mining—Direct and indirect",2013,8.172719,8.102144,8.244533,0,11.735668,25.019252
+"Texas","Nolan","COG mining—Direct and indirect",2014,8.202138,8.131058,8.274472,2.414736,13.311985,28.180988
+"Texas","Nolan","COG mining—Direct and indirect",2015,8.212307,8.141051,8.284821,2.703299,10.988728,24.292607
+"Texas","Nolan","COG mining—Direct and indirect",2016,8.223353,8.151907,8.296063,0,9.061355,34.268964
+"Texas","Nolan","COG mining—Direct and indirect",2017,8.235875,8.164212,8.308808,0,24.974667,341.006258
+"Texas","Nolan","COG mining—Direct and indirect",2018,8.232386,8.160783,8.305256,0,34.089999,1442.688437
+"Texas","Nolan","COG mining—Direct and indirect",2019,8.235449,8.163793,8.308373,0,23.884349,2004.153175
+"Texas","Pecos","COG mining—Direct and indirect",2010,157.707578,156.703959,158.724136,0,184.147609,1317.113435
+"Texas","Pecos","COG mining—Direct and indirect",2011,304.316181,302.383631,306.273593,0,198.164309,1202.130691
+"Texas","Pecos","COG mining—Direct and indirect",2012,449.353725,446.431818,452.314132,29.951002,201.38245,1204.490607
+"Texas","Pecos","COG mining—Direct and indirect",2013,608.158828,603.858145,612.52121,77.979926,205.951823,1225.780579
+"Texas","Pecos","COG mining—Direct and indirect",2014,836.107385,829.230498,843.099287,94.481892,208.731055,1243.545032
+"Texas","Pecos","COG mining—Direct and indirect",2015,949.755616,941.185299,958.483448,87.832391,205.405369,1227.48772
+"Texas","Pecos","COG mining—Direct and indirect",2016,1128.427049,1116.627142,1140.47901,82.824422,203.878968,1242.331649
+"Texas","Pecos","COG mining—Direct and indirect",2017,1482.289997,1463.214879,1501.869028,106.21174,223.200538,1590.44331
+"Texas","Pecos","COG mining—Direct and indirect",2018,1410.745454,1393.595716,1428.322545,122.402507,234.521213,2718.897138
+"Texas","Pecos","COG mining—Direct and indirect",2019,1583.496801,1562.002917,1605.59047,148.848099,228.425523,3330.254493
+"Texas","Reagan","COG mining—Direct and indirect",2010,167.585258,166.473466,168.711999,73.684361,2237.778531,3712.908164
+"Texas","Reagan","COG mining—Direct and indirect",2011,360.147197,357.635651,362.694268,270.118707,2269.137252,3808.447929
+"Texas","Reagan","COG mining—Direct and indirect",2012,627.17737,622.517356,631.907678,475.637866,2287.893042,3999.426278
+"Texas","Reagan","COG mining—Direct and indirect",2013,950.076304,942.57307,957.699953,488.976472,2287.450269,3959.871594
+"Texas","Reagan","COG mining—Direct and indirect",2014,1769.768633,1753.223983,1786.628511,540.168756,2295.241646,4038.480704
+"Texas","Reagan","COG mining—Direct and indirect",2015,1992.335762,1971.529752,2013.585596,462.751006,2281.691185,3898.300293
+"Texas","Reagan","COG mining—Direct and indirect",2016,2363.80428,2337.885905,2390.303772,380.036726,2268.93758,3776.852193
+"Texas","Reagan","COG mining—Direct and indirect",2017,5600.651307,5503.78236,5700.991215,432.563911,2292.469352,4176.073365
+"Texas","Reagan","COG mining—Direct and indirect",2018,5465.608279,5379.20568,5554.831844,475.119318,2307.599257,5350.769131
+"Texas","Reagan","COG mining—Direct and indirect",2019,5275.759187,5194.597078,5359.497758,427.32763,2290.777577,5831.918923
+"Texas","Real","COG mining—Direct and indirect",2013,0.224403,0.218398,0.230748,0.224403,0.224403,0.224403
+"Texas","Reeves","COG mining—Direct and indirect",2010,158.861099,157.847758,159.887533,0,1972.199126,10376.888475
+"Texas","Reeves","COG mining—Direct and indirect",2011,320.591057,318.458159,322.752718,163.076093,2001.653232,10449.307272
+"Texas","Reeves","COG mining—Direct and indirect",2012,524.749488,521.008056,528.545045,396.347506,2024.418738,10688.961345
+"Texas","Reeves","COG mining—Direct and indirect",2013,755.414826,749.623239,761.296602,445.070236,2029.088354,10711.468210000001
+"Texas","Reeves","COG mining—Direct and indirect",2014,1139.159675,1128.706588,1149.808187,459.490783,2031.566857,10725.581984
+"Texas","Reeves","COG mining—Direct and indirect",2015,1335.397919,1323.844081,1347.155204,440.352768,2026.436799,10687.620596
+"Texas","Reeves","COG mining—Direct and indirect",2016,1619.646114,1605.126681,1634.430621,404.123513,2020.399468,10647.704335
+"Texas","Reeves","COG mining—Direct and indirect",2017,4389.132498,4337.345333,4442.171267,585.004874,2062.476175,11272.050734
+"Texas","Reeves","COG mining—Direct and indirect",2018,17199.137666,16804.781955,17612.446746,781.585293,2099.860003,12716.896772
+"Texas","Reeves","COG mining—Direct and indirect",2019,14084.424295,13795.508099,14385.700761,728.243154,2082.236379,13188.311419
+"Texas","Schleicher","COG mining—Direct and indirect",2010,29.056086,28.809518,29.306911,0,13.568918,109.641549
+"Texas","Schleicher","COG mining—Direct and indirect",2011,31.949446,31.653276,32.25121,0,35.504807,90.793362
+"Texas","Schleicher","COG mining—Direct and indirect",2012,33.068369,32.751526,33.391402,0,38.522462,90.719491
+"Texas","Schleicher","COG mining—Direct and indirect",2013,33.68688,33.358238,34.022061,1.428295,39.783819,71.85199
+"Texas","Schleicher","COG mining—Direct and indirect",2014,34.191477,33.853024,34.536767,8.910778,41.259894,73.796833
+"Texas","Schleicher","COG mining—Direct and indirect",2015,34.355908,34.014214,34.704537,0,37.533236,52.871948
+"Texas","Schleicher","COG mining—Direct and indirect",2016,34.569743,34.223805,34.922747,6.272791,37.710965,88.40306
+"Texas","Schleicher","COG mining—Direct and indirect",2017,34.784531,34.434324,35.141935,0.520242,52.822333,385.40521
+"Texas","Scurry","COG mining—Direct and indirect",2010,18.347063,18.201664,18.494804,0,0,4.165238
+"Texas","Scurry","COG mining—Direct and indirect",2011,19.466969,19.303793,19.632928,0,14.047997,14.522485
+"Texas","Scurry","COG mining—Direct and indirect",2012,19.875527,19.705543,20.048468,0,16.664681,9.581042
+"Texas","Scurry","COG mining—Direct and indirect",2013,20.11443,19.940382,20.291544,21.562082,23.339154,56.42577
+"Texas","Scurry","COG mining—Direct and indirect",2014,20.290348,20.11327,20.470572,22.800308,23.913042,47.418574
+"Texas","Scurry","COG mining—Direct and indirect",2015,20.346193,20.168144,20.527414,9.212744,19.584927,19.192331
+"Texas","Scurry","COG mining—Direct and indirect",2016,20.414788,20.235542,20.597238,2.817162,17.858041,31.602474
+"Texas","Scurry","COG mining—Direct and indirect",2017,20.493784,20.31316,20.677649,6.084096,34.272567,344.424234
+"Texas","Scurry","COG mining—Direct and indirect",2018,20.476464,20.296145,20.660016,16.030605,44.691056,1461.926024
+"Texas","Scurry","COG mining—Direct and indirect",2019,20.49213,20.311536,20.675964,7.092073,33.482978,2011.22183
+"Texas","Sterling","COG mining—Direct and indirect",2010,36.699487,36.432413,36.970506,0,0,120.772035
+"Texas","Sterling","COG mining—Direct and indirect",2011,41.447544,41.111721,41.788898,0,4.967969,109.225206
+"Texas","Sterling","COG mining—Direct and indirect",2012,43.382895,43.016033,43.756069,0,10.190968,135.922984
+"Texas","Sterling","COG mining—Direct and indirect",2013,44.480036,44.094763,44.8721,14.038001,13.156454,137.742666
+"Texas","Sterling","COG mining—Direct and indirect",2014,45.388239,44.987311,45.796378,31.927579,16.136172,157.940906
+"Texas","Sterling","COG mining—Direct and indirect",2015,45.635947,45.230658,46.048565,4.463888,9.803199,105.3768
+"Texas","Sterling","COG mining—Direct and indirect",2016,45.995765,45.584094,46.41494,3.618757,8.878256,127.522088
+"Texas","Sterling","COG mining—Direct and indirect",2017,46.393657,45.974928,46.820084,4.804272,24.992053,436.693169
+"Texas","Sterling","COG mining—Direct and indirect",2018,46.276426,45.859813,46.700679,2.956073,33.706413,1533.507775
+"Texas","Sterling","COG mining—Direct and indirect",2019,46.371689,45.95337,46.797695,0.261798,23.400521,2093.75562
+"Texas","Stonewall","COG mining—Direct and indirect",2010,3.573062,3.542751,3.603896,0,0,21.642137
+"Texas","Stonewall","COG mining—Direct and indirect",2011,3.613342,3.582349,3.644875,0,0,7.661522
+"Texas","Stonewall","COG mining—Direct and indirect",2012,3.627315,3.596084,3.659094,0,1.46687,18.539689
+"Texas","Stonewall","COG mining—Direct and indirect",2013,3.634811,3.603452,3.666722,0.116755,4.432356,20.359372
+"Texas","Stonewall","COG mining—Direct and indirect",2014,3.640609,3.609149,3.672621,7.599238,5.908431,22.304215
+"Texas","Stonewall","COG mining—Direct and indirect",2015,3.642465,3.610974,3.67451,0,2.181773,1.37933
+"Texas","Stonewall","COG mining—Direct and indirect",2016,3.644782,3.613251,3.676869,0.104607,1.657801,28.39219
+"Texas","Stonewall","COG mining—Direct and indirect",2017,3.647251,3.615677,3.679381,0.596315,17.671355,336.346378
+"Texas","Stonewall","COG mining—Direct and indirect",2018,3.646524,3.614963,3.678642,0,26.385716,1433.160985
+"Texas","Stonewall","COG mining—Direct and indirect",2019,3.647209,3.615636,3.679338,2.298098,16.982009,2004.360867
+"Texas","Sutton","COG mining—Direct and indirect",2010,4.994503,4.950115,5.039694,0,0,131.18527
+"Texas","Sutton","COG mining—Direct and indirect",2011,5.072087,5.026322,5.118693,0,0,28.371457
+"Texas","Sutton","COG mining—Direct and indirect",2012,5.099072,5.052823,5.146176,0,0,3.959724
+"Texas","Sutton","COG mining—Direct and indirect",2013,5.114062,5.067542,5.161444,0,2.304084,15.514551
+"Texas","Sutton","COG mining—Direct and indirect",2014,5.12536,5.078635,5.172953,0,2.877972,6.507356
+"Texas","Sutton","COG mining—Direct and indirect",2016,5.134008,5.087126,5.181762,0.34807,0.431715,34.499408
+"Texas","Sutton","COG mining—Direct and indirect",2017,5.138886,5.091916,5.186731,0.145972,16.345027,341.236703
+"Texas","Sutton","COG mining—Direct and indirect",2018,5.137486,5.090541,5.185305,0,25.259872,1440.485095
+"Texas","Sutton","COG mining—Direct and indirect",2019,5.138699,5.091732,5.186541,0,15.154466,2003.166726
+"Texas","Terrell","COG mining—Direct and indirect",2010,2.46502,2.441538,2.488958,0,0,4.410837
+"Texas","Terrell","COG mining—Direct and indirect",2011,2.484163,2.460317,2.508476,0,0,0.165367
+"Texas","Terrell","COG mining—Direct and indirect",2012,2.49074,2.466769,2.515182,0,0.459558,6.175962
+"Texas","Terrell","COG mining—Direct and indirect",2014,2.497035,2.472943,2.521601,0,5.602819,18.458739
+"Texas","Terrell","COG mining—Direct and indirect",2015,2.498006,2.473895,2.522591,1.55673,3.881019,21.871716
+"Texas","Terrell","COG mining—Direct and indirect",2016,2.499066,2.474935,2.523673,0,2.75559,41.583218
+"Texas","Terrell","COG mining—Direct and indirect",2017,2.500231,2.476078,2.524861,0.509501,18.869387,350.754299
+"Texas","Terrell","COG mining—Direct and indirect",2018,2.4999,2.475753,2.524523,0.048915,27.784233,1450.002692
+"Texas","Terry","COG mining—Direct and indirect",2010,7.24394,7.18021,7.30881,0,0,9.011236
+"Texas","Terry","COG mining—Direct and indirect",2011,7.411871,7.345187,7.479776,0,0,7.199552
+"Texas","Terry","COG mining—Direct and indirect",2012,7.471519,7.403767,7.540523,0,2.495655,35.114223
+"Texas","Terry","COG mining—Direct and indirect",2013,7.502687,7.434372,7.572269,0,3.857255,17.463615
+"Texas","Terry","COG mining—Direct and indirect",2014,7.527429,7.458666,7.597472,0,5.333329,19.408458
+"Texas","Terry","COG mining—Direct and indirect",2015,7.536126,7.467204,7.606332,0,3.310801,19.170757
+"Texas","Terry","COG mining—Direct and indirect",2016,7.546008,7.476906,7.616399,0,2.686586,44.966724
+"Texas","Terry","COG mining—Direct and indirect",2017,7.556775,7.487477,7.627367,2.811932,19.101112,357.788484
+"Texas","Terry","COG mining—Direct and indirect",2018,7.553479,7.484241,7.624009,0,27.414501,1449.735518
+"Texas","Tom Green","COG mining—Direct and indirect",2010,6.330218,6.277188,6.38415,0,0,4.520894
+"Texas","Tom Green","COG mining—Direct and indirect",2011,6.458017,6.40285,6.514144,0,0,0.275424
+"Texas","Tom Green","COG mining—Direct and indirect",2012,6.502723,6.446795,6.55963,0,0.876906,8.719805
+"Texas","Tom Green","COG mining—Direct and indirect",2013,6.526921,6.470579,6.584253,0,4.042878,12.973273
+"Texas","Tom Green","COG mining—Direct and indirect",2014,6.545873,6.489205,6.603539,1.483874,6.220653,23.436368
+"Texas","Tom Green","COG mining—Direct and indirect",2015,6.552482,6.4957,6.610265,4.547662,4.298367,24.41556
+"Texas","Tom Green","COG mining—Direct and indirect",2016,6.559749,6.502842,6.617661,1.621112,3.072695,42.910168
+"Texas","Tom Green","COG mining—Direct and indirect",2017,6.568053,6.511002,6.626112,8.357078,19.988436,361.816394
+"Texas","Tom Green","COG mining—Direct and indirect",2018,6.565563,6.508556,6.623578,3.733654,28.301824,1453.763428
+"Texas","Tom Green","COG mining—Direct and indirect",2019,6.567511,6.51047,6.625561,1.733185,18.096175,2015.228166
+"Texas","Upton","COG mining—Direct and indirect",2010,172.504484,171.324075,173.701273,442.896266,2123.221772,3397.067013
+"Texas","Upton","COG mining—Direct and indirect",2011,391.312143,388.322451,394.348226,684.428025,2161.096281,3571.704831
+"Texas","Upton","COG mining—Direct and indirect",2012,714.299929,708.119028,720.589681,866.357768,2176.443812,3721.308813
+"Texas","Upton","COG mining—Direct and indirect",2013,1136.320983,1125.14911,1147.716937,860.269796,2173.194239,3647.681122
+"Texas","Upton","COG mining—Direct and indirect",2014,2246.803824,2218.185712,2276.170026,864.977054,2174.269342,3644.758393
+"Texas","Upton","COG mining—Direct and indirect",2015,2168.424795,2142.164409,2195.337014,717.484863,2150.594348,3381.671778
+"Texas","Upton","COG mining—Direct and indirect",2016,2368.07068,2340.626582,2396.165983,599.386457,2132.728356,3198.162128
+"Texas","Upton","COG mining—Direct and indirect",2017,4575.198691,4502.633613,4650.14102,615.835712,2151.047497,3534.104858
+"Texas","Upton","COG mining—Direct and indirect",2018,4069.594536,4011.36752,4129.536839,638.270735,2163.270358,4673.510724
+"Texas","Upton","COG mining—Direct and indirect",2019,4558.509577,4488.107957,4631.155071,619.618914,2150.658879,5205.770026
+"Texas","Val Verde","COG mining—Direct and indirect",2010,0.279029,0.271562,0.286919,0.279029,0.279029,0.279029
+"Texas","Ward","COG mining—Direct and indirect",2010,156.294386,155.309588,157.291752,0,455.535363,1327.270428
+"Texas","Ward","COG mining—Direct and indirect",2011,310.685159,308.678653,312.717923,85.564959,485.490683,1405.77369
+"Texas","Ward","COG mining—Direct and indirect",2012,477.791829,474.564306,481.063553,241.13006,497.028985,1509.135734
+"Texas","Ward","COG mining—Direct and indirect",2013,668.375207,663.314825,673.513392,303.035111,503.603215,1554.763569
+"Texas","Ward","COG mining—Direct and indirect",2014,917.240425,909.2528,925.369633,282.071534,500.969331,1506.815794
+"Texas","Ward","COG mining—Direct and indirect",2015,926.899735,918.784244,935.15987,158.862565,480.802838,1286.320438
+"Texas","Ward","COG mining—Direct and indirect",2016,1086.962691,1076.175554,1097.968269,146.916533,478.274009,1288.995436
+"Texas","Ward","COG mining—Direct and indirect",2017,1524.640792,1504.66643,1545.152606,216.788877,504.311853,1718.638935
+"Texas","Ward","COG mining—Direct and indirect",2018,1479.314261,1460.722696,1498.385181,245.468157,517.4369,2868.996839
+"Texas","Ward","COG mining—Direct and indirect",2019,1519.154461,1499.586462,1539.239895,219.184466,503.72275,3387.870317
+"Texas","Winkler","COG mining—Direct and indirect",2010,130.911798,130.152566,131.679941,0,71.163042,236.539893
+"Texas","Winkler","COG mining—Direct and indirect",2011,221.873117,220.499019,223.264449,0,95.003546,240.812675
+"Texas","Winkler","COG mining—Direct and indirect",2012,291.28104,289.277189,293.312847,0,99.925817,263.859773
+"Texas","Winkler","COG mining—Direct and indirect",2013,354.432264,351.666171,357.242217,53.267743,108.404662,332.608577
+"Texas","Winkler","COG mining—Direct and indirect",2014,413.997306,410.356011,417.703801,32.304166,105.770778,284.660802
+"Texas","Winkler","COG mining—Direct and indirect",2015,441.74847,437.633341,445.941723,33.286535,103.547764,281.989314
+"Texas","Winkler","COG mining—Direct and indirect",2016,476.867502,472.092068,481.740535,28.278566,102.021363,296.833243
+"Texas","Winkler","COG mining—Direct and indirect",2017,535.272462,529.32425,541.355878,66.929624,123.548277,671.716552
+"Texas","Winkler","COG mining—Direct and indirect",2018,539.890218,533.857026,546.061334,127.523997,141.284497,1878.05154
+"Texas","Winkler","COG mining—Direct and indirect",2019,538.204998,532.210304,544.336277,80.426115,124.56306,2360.418224
+"Texas","Yoakum","COG mining—Direct and indirect",2010,60.679314,60.283814,61.080038,0,51.97098,29.973078
+"Texas","Yoakum","COG mining—Direct and indirect",2011,74.884378,74.3119,75.465744,0,75.109783,25.727608
+"Texas","Yoakum","COG mining—Direct and indirect",2012,81.459567,80.788981,82.141379,0,80.533268,54.859172
+"Texas","Yoakum","COG mining—Direct and indirect",2013,86.107758,85.361145,86.867547,45.411315,95.527902,202.706028
+"Texas","Yoakum","COG mining—Direct and indirect",2014,89.245365,88.444838,90.060515,26.529157,93.194746,158.408933
+"Texas","Yoakum","COG mining—Direct and indirect",2015,90.09977,89.283949,90.930636,0,85.157644,85.157644
+"Texas","Yoakum","COG mining—Direct and indirect",2016,91.559169,90.716851,92.417275,0,84.934401,115.821184
+"Texas","Yoakum","COG mining—Direct and indirect",2017,93.156244,92.284915,94.044184,0,101.148441,426.209158
+"Texas","Yoakum","COG mining—Direct and indirect",2018,92.705001,91.842167,93.5842,0,110.16353,1526.674444
+"Texas","Yoakum","COG mining—Direct and indirect",2019,92.850848,91.985323,93.732815,0,96.349137,2044.331029

@@ -292,157 +292,157 @@
 }
 
 
-#  ------------------------------------------------------------------------#
-# C.2. visualize indirect water-use model output----
-#  ------------------------------------------------------------------------#
-
-
-# make function with following arguments:
-#   data = indirect water-use parameters from ".model_indirect" function as list;
-#   catg = category ("indirect") of analysis as character vector
-.visualize_indirect = function(data=modind,
-                               catg="indirect") {
-
-  if (any(sapply(list(data, catg), is.null))) stop("one or more necessary arguments missing")
-
-  # make tables of parameter estimates and confidence intervals, cross-validated goodness-of-fit metrics, and predicted values and confidence intervals
-  .table_model(data=data,
-               catg=catg)
-
-  # for each use
-  for (iuse in names(data)) {
-    data2 = data[[iuse]]
-
-    # make figures of predicted values against wells, and predicted against observed values
-    .figure_model(data=data2,
-                  use=iuse)
-  }
-}
-
-
-#  ------------------------------------------------------------------------#
-# C.3. visualize ancillary water-use model output----
-#  ------------------------------------------------------------------------#
-
-
-# make function with following arguments:
-#   data = ancillary water-use parameters from ".model_ancillary" function as list;
-#   catg = category ("ancillary") of analysis as character vector
-.visualize_ancillary = function(data=modanc,
-                                catg="ancillary") {
-
-  if (any(sapply(list(data, catg), is.null))) stop("one or more necessary arguments missing")
-
-  # make tables of parameter estimates and confidence intervals, cross-validated goodness-of-fit metrics, and predicted values and confidence intervals
-  .table_model(data=data,
-               catg=catg)
-
-  # for each use
-  for (iuse in names(data)) {
-    data2 = data[[iuse]]
-
-    # make figures of predicted values against wells, and predicted against observed values
-    .figure_model(data=data2,
-                  use=iuse)
-  }
-}
-
-
-#  ------------------------------------------------------------------------#
-# C.4. visualize population model output----
-#  ------------------------------------------------------------------------#
-
-
-# make function with following arguments:
-#   data = population parameters from ".model_population" function as list
-.visualize_population = function(data=modpop) {
-
-  if (any(sapply(list(data), is.null))) stop("one or more necessary arguments missing")
-
-  # make table of parameter estimates and confidence intervals
-  dat = data$Parameters %>%
-    filter(str_detect(term, "Wells")) %>%
-    select(term, estimate, conf.low, conf.high)
-  temp = str_extract(dat$term, "[[:digit:]]")
-  dat %<>% select(-term)
-  dat[1, "Units"] = paste("in persons per well lagged by", temp, "years")
-  write_excel_csv(dat, "Product/population_coefficients.csv")
-
-  # get predicted values and confidence intervals
-  dat = data$Predictions %>%
-    mutate(across(contains(c("Persons", ".fitted", ".conf")), function(x) {x / 1e6}))
-
-  # get range of x and y variables for axis breaks
-  xbrk = unique(dat$Year)
-  ybrk = dat %>%
-    select(Persons, .fitted, .conf.low, .conf.high) %>%
-    range(na.rm=T) %>%
-    pretty()
-
-  # make changes to axis labels
-  if (any(grepl("\\.", ybrk))) {
-    ylab = waiver()
-  } else {
-    ylab = function(x) comma(x)
-  }
-  if (any(grepl("\\.", xbrk))) {
-    xlab = waiver()
-  } else {
-    xlab = function(x) comma(x)
-  }
-
-  # get confidence level for guide
-  conlev = data$Parameters$conlev
-  conlev = paste0(conlev * 100, "-percent confidence interval")
-
-  # make figure of population against year
-  pal = brewer_pal(type="seq", palette="Blues")(4)[-c(1, 2)]
-  ggp = ggplot(dat) +
-    geom_ribbon(aes(Year, ymin=.conf.low, ymax=.conf.high, fill=conlev), show.legend=F) +
-    geom_line(aes(Year, .fitted, color=conlev), size=NA) +
-    geom_line(aes(Year, .fitted, color="Estimated mean"), size=0.3) +
-    geom_point(aes(Year, Persons, color="Observation"), size=0.3) +
-    scale_x_continuous(breaks=xbrk, position="bottom", sec.axis=sec_axis(~ ., breaks=xbrk, labels=NULL)) +
-    scale_y_continuous(breaks=ybrk, labels=ylab, position="left", sec.axis=sec_axis(~ ., breaks=ybrk, labels=NULL)) +
-    coord_cartesian(xlim=range(xbrk), ylim=range(ybrk), expand=F) +
-    scale_fill_manual(name=NULL, values=pal[1]) +
-    scale_color_manual(name="EXPLANATION", values=c(pal, "black"), breaks=c(conlev, "Estimated mean", "Observation")) +
-    guides(color=guide_legend(override.aes=list(linetype=c(1, 1, 0),  shape=c(NA, NA, 16), size=c(3, 0.3, 0.6)))) +
-    labs(x="Year", y="Number of persons, in millions")
-  ggsave("Product/Population Model.svg", width=5, height=2.5)
-
-  # get range of x and y variables for axis breaks
-  xbrk = ybrk = dat %>%
-    select(Persons, .fitted) %>%
-    range(na.rm=T) %>%
-    pretty()
-
-  # make changes to axis labels
-  if (any(grepl("\\.", ybrk))) {
-    ylab = waiver()
-  } else {
-    ylab = function(x) comma(x)
-  }
-  if (any(grepl("\\.", xbrk))) {
-    xlab = waiver()
-  } else {
-    xlab = function(x) comma(x)
-  }
-
-  # make figure of water use predictions against observations
-  ggp = ggplot(dat) +
-    geom_abline(intercept=0, slope=1, linetype="dashed", color="black", size=0.3, show.legend=F) +
-    geom_line(aes(0, 0, color="1:1 line"), linetype="dashed", size=0.3) +
-    geom_point(aes(Persons, .fitted, color="Sampling unit"), size=0.3) +
-    scale_x_continuous(breaks=xbrk, labels=xlab, position="bottom", sec.axis=sec_axis(~ ., breaks=xbrk, labels=NULL)) +
-    scale_y_continuous(breaks=ybrk, labels=ylab, position="left", sec.axis=sec_axis(~ ., breaks=ybrk, labels=NULL)) +
-    coord_cartesian(xlim=range(xbrk), ylim=range(ybrk), expand=F) +
-    scale_color_manual(name="EXPLANATION", values=c("black", "black"), breaks=c("Sampling unit", "1:1 line")) +
-    guides(color=guide_legend(override.aes=list(linetype=c(0, 2), shape=c(16, NA), size=c(0.6, 0.3)))) +
-    labs(x="Observed number of persons, in millions", y="Estimated number of persons, in millions") +
-    theme(aspect.ratio=1)
-  ggsave("Product/Population Fit.svg", width=2.5, height=3)
-}
+# #  ------------------------------------------------------------------------#
+# # C.2. visualize indirect water-use model output----
+# #  ------------------------------------------------------------------------#
+# 
+# 
+# # make function with following arguments:
+# #   data = indirect water-use parameters from ".model_indirect" function as list;
+# #   catg = category ("indirect") of analysis as character vector
+# .visualize_indirect = function(data=modind,
+#                                catg="indirect") {
+# 
+#   if (any(sapply(list(data, catg), is.null))) stop("one or more necessary arguments missing")
+# 
+#   # make tables of parameter estimates and confidence intervals, cross-validated goodness-of-fit metrics, and predicted values and confidence intervals
+#   .table_model(data=data,
+#                catg=catg)
+# 
+#   # for each use
+#   for (iuse in names(data)) {
+#     data2 = data[[iuse]]
+# 
+#     # make figures of predicted values against wells, and predicted against observed values
+#     .figure_model(data=data2,
+#                   use=iuse)
+#   }
+# }
+# 
+# 
+# #  ------------------------------------------------------------------------#
+# # C.3. visualize ancillary water-use model output----
+# #  ------------------------------------------------------------------------#
+# 
+# 
+# # make function with following arguments:
+# #   data = ancillary water-use parameters from ".model_ancillary" function as list;
+# #   catg = category ("ancillary") of analysis as character vector
+# .visualize_ancillary = function(data=modanc,
+#                                 catg="ancillary") {
+# 
+#   if (any(sapply(list(data, catg), is.null))) stop("one or more necessary arguments missing")
+# 
+#   # make tables of parameter estimates and confidence intervals, cross-validated goodness-of-fit metrics, and predicted values and confidence intervals
+#   .table_model(data=data,
+#                catg=catg)
+# 
+#   # for each use
+#   for (iuse in names(data)) {
+#     data2 = data[[iuse]]
+# 
+#     # make figures of predicted values against wells, and predicted against observed values
+#     .figure_model(data=data2,
+#                   use=iuse)
+#   }
+# }
+# 
+# 
+# #  ------------------------------------------------------------------------#
+# # C.4. visualize population model output----
+# #  ------------------------------------------------------------------------#
+# 
+# 
+# # make function with following arguments:
+# #   data = population parameters from ".model_population" function as list
+# .visualize_population = function(data=modpop) {
+# 
+#   if (any(sapply(list(data), is.null))) stop("one or more necessary arguments missing")
+# 
+#   # make table of parameter estimates and confidence intervals
+#   dat = data$Parameters %>%
+#     filter(str_detect(term, "Wells")) %>%
+#     select(term, estimate, conf.low, conf.high)
+#   temp = str_extract(dat$term, "[[:digit:]]")
+#   dat %<>% select(-term)
+#   dat[1, "Units"] = paste("in persons per well lagged by", temp, "years")
+#   write_excel_csv(dat, "Product/population_coefficients.csv")
+# 
+#   # get predicted values and confidence intervals
+#   dat = data$Predictions %>%
+#     mutate(across(contains(c("Persons", ".fitted", ".conf")), function(x) {x / 1e6}))
+# 
+#   # get range of x and y variables for axis breaks
+#   xbrk = unique(dat$Year)
+#   ybrk = dat %>%
+#     select(Persons, .fitted, .conf.low, .conf.high) %>%
+#     range(na.rm=T) %>%
+#     pretty()
+# 
+#   # make changes to axis labels
+#   if (any(grepl("\\.", ybrk))) {
+#     ylab = waiver()
+#   } else {
+#     ylab = function(x) comma(x)
+#   }
+#   if (any(grepl("\\.", xbrk))) {
+#     xlab = waiver()
+#   } else {
+#     xlab = function(x) comma(x)
+#   }
+# 
+#   # get confidence level for guide
+#   conlev = data$Parameters$conlev
+#   conlev = paste0(conlev * 100, "-percent confidence interval")
+# 
+#   # make figure of population against year
+#   pal = brewer_pal(type="seq", palette="Blues")(4)[-c(1, 2)]
+#   ggp = ggplot(dat) +
+#     geom_ribbon(aes(Year, ymin=.conf.low, ymax=.conf.high, fill=conlev), show.legend=F) +
+#     geom_line(aes(Year, .fitted, color=conlev), size=NA) +
+#     geom_line(aes(Year, .fitted, color="Estimated mean"), size=0.3) +
+#     geom_point(aes(Year, Persons, color="Observation"), size=0.3) +
+#     scale_x_continuous(breaks=xbrk, position="bottom", sec.axis=sec_axis(~ ., breaks=xbrk, labels=NULL)) +
+#     scale_y_continuous(breaks=ybrk, labels=ylab, position="left", sec.axis=sec_axis(~ ., breaks=ybrk, labels=NULL)) +
+#     coord_cartesian(xlim=range(xbrk), ylim=range(ybrk), expand=F) +
+#     scale_fill_manual(name=NULL, values=pal[1]) +
+#     scale_color_manual(name="EXPLANATION", values=c(pal, "black"), breaks=c(conlev, "Estimated mean", "Observation")) +
+#     guides(color=guide_legend(override.aes=list(linetype=c(1, 1, 0),  shape=c(NA, NA, 16), size=c(3, 0.3, 0.6)))) +
+#     labs(x="Year", y="Number of persons, in millions")
+#   ggsave("Product/Population Model.svg", width=5, height=2.5)
+# 
+#   # get range of x and y variables for axis breaks
+#   xbrk = ybrk = dat %>%
+#     select(Persons, .fitted) %>%
+#     range(na.rm=T) %>%
+#     pretty()
+# 
+#   # make changes to axis labels
+#   if (any(grepl("\\.", ybrk))) {
+#     ylab = waiver()
+#   } else {
+#     ylab = function(x) comma(x)
+#   }
+#   if (any(grepl("\\.", xbrk))) {
+#     xlab = waiver()
+#   } else {
+#     xlab = function(x) comma(x)
+#   }
+# 
+#   # make figure of water use predictions against observations
+#   ggp = ggplot(dat) +
+#     geom_abline(intercept=0, slope=1, linetype="dashed", color="black", size=0.3, show.legend=F) +
+#     geom_line(aes(0, 0, color="1:1 line"), linetype="dashed", size=0.3) +
+#     geom_point(aes(Persons, .fitted, color="Sampling unit"), size=0.3) +
+#     scale_x_continuous(breaks=xbrk, labels=xlab, position="bottom", sec.axis=sec_axis(~ ., breaks=xbrk, labels=NULL)) +
+#     scale_y_continuous(breaks=ybrk, labels=ylab, position="left", sec.axis=sec_axis(~ ., breaks=ybrk, labels=NULL)) +
+#     coord_cartesian(xlim=range(xbrk), ylim=range(ybrk), expand=F) +
+#     scale_color_manual(name="EXPLANATION", values=c("black", "black"), breaks=c("Sampling unit", "1:1 line")) +
+#     guides(color=guide_legend(override.aes=list(linetype=c(0, 2), shape=c(16, NA), size=c(0.6, 0.3)))) +
+#     labs(x="Observed number of persons, in millions", y="Estimated number of persons, in millions") +
+#     theme(aspect.ratio=1)
+#   ggsave("Product/Population Fit.svg", width=2.5, height=3)
+# }
 
 
 #  ------------------------------------------------------------------------#
@@ -458,60 +458,63 @@
 #   data5 = indirect water-use coefficients from ".model_indirect" function as data frame;
 #   data6 = ancillary water-use coefficients from ".model_ancillary" function as data frame;
 .visualize_data_release = function(data=preddir,
-                                   data2=predind,
-                                   data3=predanc,
-                                   data4=coefdir,
-                                   data5=coefind,
-                                   data6=coefanc) {
+                                   # data2=predind,
+                                   # data3=predanc,
+                                   data4=coefdir
+                                   # data5=coefind,
+                                   # data6=coefanc
+                                   ) {
 
-  if (any(sapply(list(data, data2, data3, data4, data5, data6), is.null))) stop("one or more necessary arguments missing")
+  #if (any(sapply(list(data, data2, data3, data4, data5, data6), is.null))) stop("one or more necessary arguments missing")
 
   # make data release file of predicted values and confidence intervals
   temp = data %>%
     filter(Use == "Direct")
-  temp2 = data2 %>%
-    filter(Use == "Indirect")
+  # temp2 = data2 %>%
+  #   filter(Use == "Indirect")
   temp$Use %<>% recode("Direct" = "Total")
-  temp2$Use %<>% recode("Indirect" = "Total")
-  dat = bind_rows(temp, temp2) %>%
+  # temp2$Use %<>% recode("Indirect" = "Total")
+  dat = temp %>% #bind_rows(temp, temp2) %>%
     select(-Count, -Units) %>%
     group_by(State, County, Use, Year) %>%
     summarize(across(everything(), sum), .groups="drop")
-  temp3 = data3 %>%
-    filter(Use %in% c("Domestic", "Public supply", "Industrial", "Mining", "Thermoelectric power"))
-  dat %<>%
-    bind_rows(temp3) %>%
-    select(State, County, Year, Use, everything(), -Units) %>%
-    mutate(across(contains("."), function(x) {round(x, 6)}))
+  # temp3 = data3 %>%
+  #   filter(Use %in% c("Domestic", "Public supply", "Industrial", "Mining", "Thermoelectric power"))
+  # dat %<>%
+  #   bind_rows(temp3) %>%
+  #   select(State, County, Year, Use, everything(), -Units) %>%
+  #   mutate(across(contains("."), function(x) {round(x, 6)}))
   names(dat) %<>%
     str_replace(".fitted", "") %>%
     str_replace("conf.low", "Lower") %>%
     str_replace("conf.high", "Upper") %>%
     str_replace("Mean.", "")
-  dat$Use %<>% recode("Total" = paste0("COG mining", "\U2014", "Direct and indirect"),
-                      "Mining" = "Non-COG mining")
+  dat$Use %<>% recode("Total" = paste0("COG mining", "\U2014", "Direct and indirect")) #\U2014 is em dash unit code
+                      #"Mining" = "Non-COG mining")
   write_excel_csv(dat, "Product/data_release_predictions.csv")
 
   # make data release file of parameter estimates and confidence intervals
   temp = data4 %>%
     filter(Use == "Direct")
-  temp2 = data5 %>%
-    filter(Use == "Indirect")
+  # temp2 = data5 %>%
+  #   filter(Use == "Indirect")
   temp$Use %<>% recode("Direct" = "Total")
-  temp2$Use %<>% recode("Indirect" = "Total")
-  dat = bind_rows(temp, temp2) %>%
+  # temp2$Use %<>% recode("Indirect" = "Total")
+  dat = temp %>%  #bind_rows(temp, temp2) %>%
     select(-Units) %>%
     group_by(Use, Year) %>%
     summarize(across(everything(), sum), .groups="drop") %>%
     arrange(match(Year, "All"))
   temp = data4
-  temp2 = data5
-  temp3 = data6 %>%
-    filter(Use %in% c("Domestic", "Public supply", "Ancillary", "Industrial", "Mining", "Thermoelectric power"))
+  # temp2 = data5
+  # temp3 = data6 %>%
+  #   filter(Use %in% c("Domestic", "Public supply", "Ancillary", "Industrial", "Mining", "Thermoelectric power"))
   dat %<>%
-    bind_rows(temp, temp2, ., temp3) %>%
+    # bind_rows(temp, temp2, ., temp3) %>% # the . with pipeline inserts dat right there into the dataframes instead of first like normal
+    bind_rows(temp, .) %>%
     select(-Units) %>%
-    arrange(match(Use, c("Direct", "Hydraulic fracturing", "Cementing", "Drilling", "Indirect", "Total", "Ancillary", "Domestic", "Public supply", "Industrial", "Mining", "Thermoelectric power"))) %>%
+    # arrange(match(Use, c("Direct", "Hydraulic fracturing", "Cementing", "Drilling", "Indirect", "Total", "Ancillary", "Domestic", "Public supply", "Industrial", "Mining", "Thermoelectric power"))) %>%
+    arrange(match(Use, c("Direct", "Hydraulic fracturing", "Cementing", "Drilling", "Total"))) %>%
     mutate(across(contains("."), function(x) {round(x, 6)}))
   names(dat) %<>%
     str_replace(".estimate", "") %>%
@@ -522,8 +525,8 @@
                       "Hydraulic fracturing" = paste0("Direct", "\U2014", "Hydraulic fracturing"),
                       "Cementing" = paste0("Direct", "\U2014", "Cementing"),
                       "Drilling" = paste0("Direct", "\U2014", "Drilling"),
-                      "Total" = paste0("Direct and indirect", "\U2014", "COG mining"),
-                      "Ancillary" = paste0("Ancillary (population-based)", "\U2014", "All"),
-                      "Mining" = "Non-COG mining")
+                      "Total" = paste0("Direct and indirect", "\U2014", "COG mining"))
+                      #"Ancillary" = paste0("Ancillary (population-based)", "\U2014", "All"),
+                      #"Mining" = "Non-COG mining")
   write_excel_csv(dat, "Product/data_release_coefficients.csv")
 }
