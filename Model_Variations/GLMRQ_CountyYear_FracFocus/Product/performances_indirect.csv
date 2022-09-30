@@ -1,0 +1,2 @@
+﻿"Use","Mean.Rsq","Mean.RMSE","Mean.RSR","P5.Rsq","P5.RMSE","P5.RSR","P50.Rsq","P50.RMSE","P50.RSR","P95.Rsq","P95.RMSE","P95.RSR","Units"
+"Indirect",0.84,0.092,0.35,0.78,0.072,0.28,0.61,0.117,0.44,0.77,0.165,0.63,"in million gallons of water use per well (except Rsq as ratio scaled from 0 to 1, RSR as ratio scaled from 0 to infinity)"
