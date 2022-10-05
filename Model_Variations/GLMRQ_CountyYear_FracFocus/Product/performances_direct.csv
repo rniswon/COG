@@ -1,5 +1,0 @@
-﻿"Use","Mean.Rsq","Mean.RMSE","Mean.RSR","P5.Rsq","P5.RMSE","P5.RSR","P50.Rsq","P50.RMSE","P50.RSR","P95.Rsq","P95.RMSE","P95.RSR","Units"
-"Hydraulic fracturing",0.92,4.384,0.24,0.74,1.726,0.09,0.63,7.736,0.42,0.8,11.505,0.62,"in million gallons of water use per well (except Rsq as ratio scaled from 0 to 1, RSR as ratio scaled from 0 to infinity)"
-"Cementing",0.86,0.007,0.34,0.98,0.005,0.26,0.98,0.003,0.16,0.97,0.005,0.24,
-"Drilling",0.86,0.071,0.34,0.98,0.054,0.26,0.98,0.034,0.16,0.97,0.05,0.24,
-"Direct",0.92,4.424,0.24,0.78,1.821,0.1,0.63,7.465,0.4,0.81,11.506,0.61,
