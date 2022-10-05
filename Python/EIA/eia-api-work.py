@@ -68,7 +68,7 @@ for string,link in zip(API_str_list, API_link_list):
     #convert to df and export to csv
     df = pd.DataFrame(jsonData['series'][0]['data'], columns= ['date', 'value'])
     df.columns = pd.MultiIndex.from_tuples(zip([header,''], df.columns)) #adding new header above dataframe column headers
-    df.to_csv('api_directory/' + string + '.csv')
+    df.to_csv('../../data-raw/eia_' + string + '.csv')
 
 #%%
 

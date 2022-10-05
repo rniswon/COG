@@ -218,7 +218,7 @@ df_geo83b.Projection.unique() # should be only 'NAD83'
 #%% read HUCS into dataframe; within repository but gitignored
 # from sciencebase(https://www.sciencebase.gov/catalog/item/5fc90839d34e4b9faad8a148)
 
-HUCS = gp.read_file("WBD_HUC12_CONUS_pulled10262020/WBD_HUC12_CONUS_pulled10262020.shp")
+HUCS = gp.read_file("gis/WBD_HUC12_CONUS_10262020/WBD_HUC12_CONUS_10262020.shp")
 
 # check projection of HUCS, should be 'NAD83' aka epsg:4269
 print(HUCS.crs)
@@ -229,8 +229,8 @@ df_geo83c = gp.sjoin(df_geo83b, HUCS, how='left', op='within')
 
 #%% some checking and clean up
 # plot it with the permian boundary out of the boundary since we used the counties to clip
-BND = gp.read_file("PermianBasin_Extent_201712.shp")
-nm_tx_cnties = gp.read_file('nm_tx_nad83.shp')
+BND = gp.read_file("gis/PermianBasin_Extent_201712.shp")
+nm_tx_cnties = gp.read_file('gis/nm_tx_nad83.shp')
 
 # reproject to NAD83
 BND2 = BND.to_crs(epsg=4269)
@@ -254,5 +254,5 @@ plt.scatter(clipped["geometry"].x, clipped["geometry"].y, color='r', s=1)
 fracfocus_short = clipped[['APINumber','OperatorName','TVD','State','County', 'Latitude', 'Longitude',
                          'job_end_date', 'VolMeanPerAPI', 'huc12']].copy()
 fracfocus_short.reset_index(drop=True, inplace=True)
-fracfocus_short.to_csv(os.path.join('..','data','fracfocus_short.csv'))
+fracfocus_short.to_csv(os.path.join('..','data','fracfocus.csv'))
 
