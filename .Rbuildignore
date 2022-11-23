@@ -1,0 +1,10 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^archive
+^data/.*\.gdb
+^data-raw
+^Python
+^results
+^scratch
+^scratch/.*\.gdb

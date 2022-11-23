@@ -1,0 +1,13 @@
+#Bring Permian basin bnd into dataframe 
+BND = gp.read_file("PermianBasin_Extent_201712.shp")
+BND.crs
+
+#Reproject geodataframe
+BND2 = BND.to_crs(epsg=4269)
+BND2.crs
+
+# Buffer FracFocus to Play BND using GeoPandas buffer
+#For whole US likely want to make this a variable that we can enter play name and might want to loop through play
+# Because projection is geographic using 100 meter buffer converted to arc seconds.  
+# Better to pick an actual projection like Albers and reproject all data to it so we have actual units
+permian_buffer = BND2.buffer(.001)

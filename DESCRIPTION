@@ -1,0 +1,18 @@
+Package: cog_water_use
+Title: USGS Continuous Oil and Gas (COG) Water Use Project
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Ryan", "McShane", email = "rmcshane@usgs.gov", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-3128-0039")),
+    person("Jeremy", "McDowell", email = "jmcdowell@usgs.gov", role = c("aut"), comment = c(ORCID = "0000-0002-8132-9806")),
+    person("Natalie", "Houston", email = "nhouston@usgs.gov", role = c("aut"), comment = c(ORCID = "0000-0002-6071-4545")),
+    person("Amy", "Galanter", email = "agalanter@usgs.gov", role = c("aut"), comment = c(ORCID = "0000-0002-2960-0136"))
+	)
+Description: The project models COG water use using regression, time series, and machine learning methods, with resulting monthly or annual predictions at a watershed or county scale.
+License: CC0
+Imports: 
+    magrittr,
+    sessioninfo
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
